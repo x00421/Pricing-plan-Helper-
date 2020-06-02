@@ -358,11 +358,11 @@ int question2()
     cout << "\tКакой мобильный оператор наиболее популярен среди ваших "
             "родственников(знакомых)?"
          << endl
-         << "\t1-Теле 2\n"
-         << "\t2-Мтс\n"
-         << "\t3-Мегафон\n"
-         << "\t4-Билайн\n"
-         << "\t5-Yota\n";
+         << "1-Теле 2\n"
+         << "2-Мтс\n"
+         << "3-Мегафон\n"
+         << "4-Билайн\n"
+         << "5-Yota\n";
     bool y = 0;
 
     int choice; //для выбора пункта меню
@@ -378,10 +378,31 @@ int question2()
     }
     switch (choice) {
     case 1:
-        mainMenu();
-        break;
+        for (int i = 0; i < 6; i++) {
+            tele2[i] += 1;
+        }
+        question3();
+    case 2:
+        for (int i = 0; i < 7; i++) {
+            mts[i] += 1;
+        }
+        question3();
+    case 3:
+        for (int i = 0; i < 7; i++) {
+            megafon[i] += 1;
+        }
+        question3();
+    case 4:
+        for (int i = 0; i < 8; i++) {
+            beeline[i] += 1;
+        }
+        question3();
+    case 5:
+        for (int i = 0; i < 3; i++) {
+            yota[i] += 1;
+        }
+        question3();
     }
-
     return 0;
 }
 
