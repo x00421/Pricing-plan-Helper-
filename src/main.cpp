@@ -6,6 +6,12 @@ HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 void mainMenu(); //функция для основного меню
 void ob_operatorax(); //функция вывода сведений об операторах
 int question1(); //вопрос
+int question2();
+int question3();
+int question4();
+int question5();
+int question6();
+int question7();
 
 int tele2[6]; //баллы для каждого из тарифов оператора Теле 2
 // 0-Мой онлайн
@@ -268,8 +274,79 @@ int question1()
     switch (choice) {
     case 1:
         megafon[0] += 1;
+        megafon[1] += 1;
+        megafon[5] += 1;
+        megafon[6] += 1;
+
+        tele2[1] += 1;
+        tele2[4] += 1;
+        tele2[5] += 1;
+
+        mts[0] += 1;
+        mts[2] += 1;
+        mts[5] += 1;
+        mts[6] += 1;
+
+        for (int i = 0; i < 8; i++) {
+            if (i != 2) {
+                beeline[i] += 1;
+            }
+        }
+
+        yota[2] += 1;
+        cout << megafon[0];
         question2();
         break;
+    case 2:
+        for (int i = 4; i < 8; i++) {
+            beeline[i] += 1;
+        }
+        yota[2] += 1;
+        for (int i = 0; i < 7; i++) {
+            if (i != 1 || i != 4) {
+                mts[i] += 1;
+            }
+        }
+
+        tele2[4] += 1;
+        tele2[5] += 1;
+
+        megafon[0] += 1;
+        megafon[5] += 1;
+        megafon[6] += 1;
+        question2();
+    case 3:
+        yota[2] += 1;
+        for (int i = 4; i < 8; i++) {
+            beeline[i] += 1;
+        }
+        for (int i = 0; i < 7; i++) {
+            if (i != 1 || i != 4 || i != 3) {
+                mts[i] += 1;
+            }
+        }
+        tele2[4] += 1;
+        tele2[5] += 1;
+
+        megafon[0] += 1;
+        megafon[5] += 1;
+        megafon[6] += 1;
+        question2();
+    case 4:
+        megafon[0] += 1;
+        megafon[5] += 1;
+        megafon[6] += 1;
+
+        tele2[5] += 1;
+
+        mts[2] += 1;
+        mts[5] += 1;
+        mts[6] += 1;
+
+        for (int i = 4; i < 8; i++) {
+            beeline[i] += 1;
+        }
+        question2();
     }
 
     return 0;
