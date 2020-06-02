@@ -438,10 +438,9 @@ int question4()
 {
     system("cls");
     cout << "\tСколько минут в среднем вы тратите на разговоры в месяц?" << endl
-         << "\t1-Меньше 100\n"
-         << "\t2-100-300\n"
-         << "\t3-300-500\n"
-         << "\t4-Более 500\n";
+         << "\t1-100-300\n"
+         << "\t2-300-500\n"
+         << "\t3-Более 500\n";
     bool y = 0;
 
     int choice; //для выбора пункта меню
@@ -457,7 +456,56 @@ int question4()
     }
     switch (choice) {
     case 1:
-        mainMenu();
+        tele2[2] += 1;
+
+        mts[3] += 1;
+        mts[4] += 1;
+
+        megafon[2] += 1;
+        megafon[4] += 1;
+
+        yota[0] += 1;
+        question5();
+        break;
+    case 2:
+        tele2[0] += 1;
+        tele2[4] += 1;
+
+        mts[0] += 1;
+        mts[1] += 1;
+
+        megafon[2] += 1;
+        megafon[3] += 1;
+
+        beeline[0] += 1;
+        beeline[2] += 1;
+
+        yota[1] += 1;
+        question5();
+        break;
+    case 3:
+        tele2[1] += 1;
+        tele2[3] += 1;
+        tele2[5] += 1;
+
+        mts[2] += 1;
+        mts[5] += 1;
+        mts[6] += 1;
+
+        megafon[0] += 1;
+        megafon[1] += 1;
+        megafon[5] += 1;
+        megafon[6] += 1;
+
+        beeline[1] += 1;
+        beeline[3] += 1;
+        beeline[4] += 1;
+        beeline[5] += 1;
+        beeline[6] += 1;
+        beeline[7] += 1;
+
+        yota[2] += 1;
+        question5();
         break;
     }
 
