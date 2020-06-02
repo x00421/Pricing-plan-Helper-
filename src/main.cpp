@@ -4,8 +4,8 @@ using namespace std;
 
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 void mainMenu(); //функция для основного меню
-void ob_operatorax();
-int question1();
+void ob_operatorax(); //функция вывода сведений об операторах
+int question1(); //вопрос
 
 int tele2[6]; //баллы для каждого из тарифов оператора Теле 2
 int mts[7]; //баллы для каждого из тарифов оператора Мтс
@@ -212,4 +212,33 @@ void ob_operatorax()
         mainMenu();
         break;
     }
+}
+
+int question1()
+{
+    system("cls");
+    cout << "\tДля каких целей вы чаще всего используете тлефон?" << endl
+         << "1-Звонки и смс\n"
+         << "2-Социальные сети\n"
+         << "3-Сторонние сервисы(ютуб,браузер,мобильные игры и тд.\n";
+    bool y = 0;
+
+    int choice; //для выбора пункта меню
+    while (!y) {
+        SetConsoleTextAttribute(hConsole, (WORD)((0 << 2) | 2));
+        cout << ">";
+        cin >> choice;
+        SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
+        if (choice < 1 || choice > 4)
+            cout << "Ошибка,такого пункта не существует!" << endl;
+        else
+            y = 1;
+    }
+    switch (choice) {
+    case 1:
+        mainMenu();
+        break;
+    }
+
+    return 0;
 }
