@@ -410,8 +410,8 @@ int question3()
 {
     system("cls");
     cout << "\tКуда чаще всего вы совершаете звонки?" << endl
-         << "\t1-В домашний регион\n"
-         << "\t2-По всей России\n";
+         << "1-В домашний регион\n"
+         << "2-По всей России\n";
     bool y = 0;
 
     int choice; //для выбора пункта меню
@@ -427,7 +427,10 @@ int question3()
     }
     switch (choice) {
     case 1:
-        mainMenu();
+        question4();
+        break;
+    case 2:
+        question4();
         break;
     }
 
