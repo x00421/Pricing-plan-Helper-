@@ -304,3 +304,123 @@ int question3()
     return 0;
 }
 
+int question4()
+{
+    system("cls");
+    cout << "\tСколько минут в среднем вы тратите на разговоры в месяц?" << endl
+         << "\t1-Меньше 100\n"
+         << "\t2-100-300\n"
+         << "\t3-300-500\n"
+         << "\t4-Более 500\n";
+    bool y = 0;
+
+    int choice; //для выбора пункта меню
+    while (!y) {
+        SetConsoleTextAttribute(hConsole, (WORD)((0 << 2) | 2));
+        cout << ">";
+        cin >> choice;
+        SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
+        if (choice < 1 || choice > 5)
+            cout << "Ошибка,такого пункта не существует!" << endl;
+        else
+            y = 1;
+    }
+    switch (choice) {
+    case 1:
+        mainMenu();
+        break;
+    }
+
+    return 0;
+}
+
+int question5()
+{
+    system("cls");
+    cout << "\tСколько SMS в среднем вы отправляете в день?" << endl
+         << "\t1: 0-2\n"
+         << "\t2: 3-10\n"
+         << "\t3: 11 и более\n"
+         << "\t4: Затрудняюсь ответитть\n";
+    bool y = 0;
+
+    int choice; //для выбора пункта меню
+    while (!y) {
+        SetConsoleTextAttribute(hConsole, (WORD)((0 << 2) | 2));
+        cout << ">";
+        cin >> choice;
+        SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
+        if (choice < 1 || choice > 5)
+            cout << "Ошибка,такого пункта не существует!" << endl;
+        else
+            y = 1;
+    }
+    switch (choice) {
+    case 1:
+        mainMenu();
+        break;
+    }
+
+    return 0;
+}
+
+int question6()
+{
+    system("cls");
+    cout << "\tКакой пакет интернета вы бы предпочли?" << endl
+         << "\1: 1-5 Гб\n"
+         << "\2: 5-10 Гб\n"
+         << "\3: 10-20 Гб\n"
+         << "\4: Безлимит\n";
+    bool y = 0;
+
+    int choice; //для выбора пункта меню
+    while (!y) {
+        SetConsoleTextAttribute(hConsole, (WORD)((0 << 2) | 2));
+        cout << ">";
+        cin >> choice;
+        SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
+        if (choice < 1 || choice > 5)
+            cout << "Ошибка,такого пункта не существует!" << endl;
+        else
+            y = 1;
+    }
+    switch (choice) {
+    case 1:
+        mainMenu();
+        break;
+    }
+
+    return 0;
+}
+
+int question7()
+{
+    system("cls");
+    cout << "\tКакую сумму вы хотели бы тратить на услуги связи и интернета?"
+         << endl
+         << "\1: До 200р\n"
+         << "\2: 200-300\n"
+         << "\3: 300-500\n"
+         << "\4: Больше 500\n";
+    bool y = 0;
+
+    int choice; //для выбора пункта меню
+    while (!y) {
+        SetConsoleTextAttribute(hConsole, (WORD)((0 << 2) | 2));
+        cout << ">";
+        cin >> choice;
+        SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
+        if (choice < 1 || choice > 5)
+            cout << "Ошибка,такого пункта не существует!" << endl;
+        else
+            y = 1;
+    }
+    switch (choice) {
+    case 1:
+        mainMenu();
+        break;
+    }
+
+    return 0;
+}
