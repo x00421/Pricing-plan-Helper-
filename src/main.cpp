@@ -618,10 +618,10 @@ int question7()
     system("cls");
     cout << "\tКакую сумму вы хотели бы тратить на услуги связи и интернета?"
          << endl
-         << "1: До 200р\n"
-         << "2: 200-300\n"
-         << "3: 300-500\n"
-         << "4: Больше 500\n";
+         << "\1: До 200-400р\n"
+         << "\2: 400-600\n"
+         << "\3: 600-800\n"
+         << "\4: Больше 800\n";
     bool y = 0;
 
     int choice; //для выбора пункта меню
@@ -637,7 +637,55 @@ int question7()
     }
     switch (choice) {
     case 1:
-        mainMenu();
+        tele2[0]++;
+        tele2[2]++;
+        tele2[3]++;
+
+        megafon[2]++;
+        megafon[3]++;
+        megafon[4]++;
+
+        beeline[2]++;
+
+        yota[1]++;
+        break;
+    case 2:
+        tele2[1]++;
+
+        mts[1]++;
+        mts[3]++;
+        mts[4]++;
+
+        megafon[1]++;
+
+        beeline[0]++;
+        beeline[3]++;
+
+        yota[2]++;
+        break;
+    case 3:
+        tele2[4]++;
+
+        mts[0]++;
+
+        megafon[0]++;
+
+        beeline[1]++;
+        beeline[4]++;
+        break;
+    case 4:
+        tele2[5]++;
+
+        mts[2]++;
+        mts[5]++;
+        mts[6]++;
+
+        megafon[5]++;
+        megafon[6]++;
+
+        beeline[5]++;
+        beeline[6]++;
+        beeline[7]++;
         break;
     }
 
