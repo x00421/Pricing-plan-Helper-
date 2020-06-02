@@ -242,3 +242,65 @@ int question1()
 
     return 0;
 }
+
+int question2()
+{
+    system("cls");
+    cout << "\tКакой мобильный оператор наиболее популярен среди ваших "
+            "родственников(знакомых)?"
+         << endl
+         << "\t1-Теле 2\n"
+         << "\t2-Мтс\n"
+         << "\t3-Мегафон\n"
+         << "\t4-Билайн\n"
+         << "\t5-Yota\n";
+    bool y = 0;
+
+    int choice; //для выбора пункта меню
+    while (!y) {
+        SetConsoleTextAttribute(hConsole, (WORD)((0 << 2) | 2));
+        cout << ">";
+        cin >> choice;
+        SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
+        if (choice < 1 || choice > 6)
+            cout << "Ошибка,такого пункта не существует!" << endl;
+        else
+            y = 1;
+    }
+    switch (choice) {
+    case 1:
+        mainMenu();
+        break;
+    }
+
+    return 0;
+}
+
+int question3()
+{
+    system("cls");
+    cout << "\tКуда чаще всего вы совершаете звонки?" << endl
+         << "\t1-В домашний регион\n"
+         << "\t2-По всей России\n";
+    bool y = 0;
+
+    int choice; //для выбора пункта меню
+    while (!y) {
+        SetConsoleTextAttribute(hConsole, (WORD)((0 << 2) | 2));
+        cout << ">";
+        cin >> choice;
+        SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
+        if (choice < 1 || choice > 3)
+            cout << "Ошибка,такого пункта не существует!" << endl;
+        else
+            y = 1;
+    }
+    switch (choice) {
+    case 1:
+        mainMenu();
+        break;
+    }
+
+    return 0;
+}
+
