@@ -538,7 +538,43 @@ int question5()
     }
     switch (choice) {
     case 1:
-        mainMenu();
+        megafon[0]++;
+        megafon[5]++;
+        megafon[6]++;
+
+        for (int i = 0; i < 7; i++) {
+            mts[i] += 1;
+        }
+
+        for (int i = 0; i < 9; i++) {
+            beeline[i] += 1;
+        }
+        question6();
+        break;
+    case 2:
+        megafon[0]++;
+        megafon[5]++;
+        megafon[6]++;
+
+        for (int i = 0; i < 5; i++) {
+            mts[i] += 1;
+        }
+
+        for (int i = 0; i < 9; i++) {
+            beeline[i] += 1;
+        }
+        question6();
+        break;
+    case 3:
+        for (int i = 0; i < 7; i++) {
+            if (i != 2 || i != 3 || i != 4) {
+                mts[i] += 1;
+            }
+        }
+        question6();
+        break;
+    case 4:
+        question6();
         break;
     }
 
