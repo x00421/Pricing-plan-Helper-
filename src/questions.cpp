@@ -1,6 +1,18 @@
+#include "questions.hpp"
+#include "Menu.hpp"
+#include "comparison.hpp"
+#include "counting_for.hpp"
 #include "globals.hpp"
+#include "ob_operatorax.hpp"
 #include <iostream>
 using namespace std;
+
+int question2();
+int question3();
+int question4();
+int question5();
+int question6();
+int question7();
 
 int question1()
 {
