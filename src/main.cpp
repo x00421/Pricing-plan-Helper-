@@ -893,6 +893,67 @@ int comparison()
     // 1
     int imax_mts, max_mts;
     counting_for_mts(&imax_mts, &max_mts);
+
+    cout << "\t         Из тарифов МТС вам больше всего подойдёт: " << endl;
+
+    switch (imax_mts) {
+    case 0:
+        cout << "\tТарифище - 650 руб./ месяц" << endl
+             << "- Опция «БЕЗЛИМИТНЫЙ интернет»" << endl
+             << "- Звонки на все сети России" << endl
+             << "- Безлимит (с опцией)25 Гб (без опции)" << endl
+             << "- 500 Минут" << endl
+             << "- 500 SMS";
+        system("pause");
+        break;
+    case 1:
+        cout << "\tМой smart - 575 руб./ месяц" << endl
+             << "- 15 гигабайт" << endl
+             << "- 400 Минут" << endl
+             << "- 400 SMS";
+        system("pause");
+        break;
+    case 2:
+        cout << "\tНаш Smart - 1040 руб./ месяц" << endl
+             << "- Используйте самостоятельно или делитесь со своей семьей"
+             << endl
+             << "- Безлимитный интернет" << endl
+             << "- 1500 мин на все сети" << endl
+             << "- До 5-ти дополнительных номеров";
+        system("pause");
+        break;
+    case 3:
+        cout << "\tТариф «X» - 520 руб./ месяц" << endl
+             << "- Безлимит на YouTube и другие популярные ресурсы " << endl
+             << "- + остальной интернет 7 ГБ" << endl
+             << "- 100 мин на все сети";
+        system("pause");
+        break;
+    case 4:
+        cout << "\tSmart  - 420 руб./ месяц" << endl
+             << "- Базовый пакет интернета и минут" << endl
+             << "- 5 ГБ" << endl
+             << "- 200 мин на все сети" << endl
+             << "Бeзлимитные звонки на МТС региона";
+        system("pause");
+        break;
+    case 5:
+        cout << "\tSmart Top - 2025 руб./месяц" << endl
+             << "- Для тех, кто не ограничивает себя в общении" << endl
+             << "- 3000 мин на все сети" << endl
+             << "- Бeзлимитные звонки на МТС России" << endl
+             << "- Безлимитный интернет" << endl;
+        system("pause");
+        break;
+    case 6:
+        cout << "\tULTRA  - 2900 руб./месяц" << endl
+             << "- Много минут и интернета, Premium сервис" << endl
+             << "- 5000 мин на все сети" << endl
+             << "- Премиальное обслуживание" << endl
+             << "- Безлимитный интернет" << endl;
+        system("pause");
+        break;
+    }
     // 2
     int imax_megafon, max_megafon;
     counting_for_megafon(&imax_megafon, &max_megafon);
