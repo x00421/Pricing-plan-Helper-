@@ -12,6 +12,7 @@ int question4();
 int question5();
 int question6();
 int question7();
+void podchet();
 
 int tele2[6]; //баллы для каждого из тарифов оператора Теле 2
 // 0-Мой онлайн
@@ -55,6 +56,7 @@ int main()
     mainMenu(); //для вывода начального меню в косоль
     return 0;
 }
+
 void mainMenu()
 {
     //вывод пунктов меню
@@ -112,6 +114,7 @@ void mainMenu()
         exit(0); //выход
     }
 }
+
 void ob_operatorax()
 {
     system("cls");
@@ -452,7 +455,7 @@ int question4()
         cout << ">";
         cin >> choice;
         SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
-        if (choice < 1 || choice > 5)
+        if (choice < 1 || choice > 4)
             cout << "Ошибка,такого пункта не существует!" << endl;
         else
             y = 1;
@@ -654,10 +657,10 @@ int question7()
     system("cls");
     cout << "\tКакую сумму вы хотели бы тратить на услуги связи и интернета?"
          << endl
-         << "\1: До 200-400р\n"
-         << "\2: 400-600\n"
-         << "\3: 600-800\n"
-         << "\4: Больше 800\n";
+         << "1: До 200-400р\n"
+         << "2: 400-600\n"
+         << "3: 600-800\n"
+         << "4: Больше 800\n";
     bool y = 0;
 
     int choice; //для выбора пункта меню
@@ -684,6 +687,7 @@ int question7()
         beeline[2]++;
 
         yota[1]++;
+        podchet();
         break;
     case 2:
         tele2[1]++;
@@ -698,6 +702,7 @@ int question7()
         beeline[3]++;
 
         yota[2]++;
+        podchet();
         break;
     case 3:
         tele2[4]++;
@@ -708,6 +713,7 @@ int question7()
 
         beeline[1]++;
         beeline[4]++;
+        podchet();
         break;
     case 4:
         tele2[5]++;
@@ -722,8 +728,30 @@ int question7()
         beeline[5]++;
         beeline[6]++;
         beeline[7]++;
+        podchet();
         break;
     }
 
     return 0;
+}
+
+void podchet()
+{
+    system("cls");
+    setlocale(LC_ALL, "Russian");
+    int i;
+    int imax_fortele2, max_fortele2;
+    imax_fortele2 = 0;
+    max_fortele2 = tele2[0];
+
+    for (i = 0; i < 7; i++) {
+        if (tele2[i] > max_fortele2)
+            max_fortele2 = tele2[i], imax_fortele2 = i + 1;
+    }
+
+    cout << "\n Максимальный элемент: " << max_fortele2;
+    cout << "\n Индекс макс. элемента: " << imax_fortele2 << endl;
+
+    system("pause");
+    mainMenu();
 }
