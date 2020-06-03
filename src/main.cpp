@@ -17,6 +17,7 @@ void counting_for_mts();
 void counting_for_megafon();
 void counting_for_beeline();
 void counting_for_yota();
+int comparison();
 
 int tele2[6]; //баллы для каждого из тарифов оператора Теле 2
 // 0-Мой онлайн
@@ -691,7 +692,7 @@ int question7()
         beeline[2]++;
 
         yota[1]++;
-        
+
         break;
     case 2:
         tele2[1]++;
@@ -706,7 +707,7 @@ int question7()
         beeline[3]++;
 
         yota[2]++;
-        
+
         break;
     case 3:
         tele2[4]++;
@@ -717,7 +718,7 @@ int question7()
 
         beeline[1]++;
         beeline[4]++;
-        
+
         break;
     case 4:
         tele2[5]++;
@@ -732,70 +733,66 @@ int question7()
         beeline[5]++;
         beeline[6]++;
         beeline[7]++;
-        
+        comparison();
+
         break;
     }
 
     return 0;
 }
 
-void counting_for_tele2()
+int counting_for_tele2(int* max_fortele2, int* imax_fortele2)
 {
     system("cls");
     setlocale(LC_ALL, "Russian");
-    int  i;
-    int imax_fortele2 , max_fortele2;
-    imax_fortele2 = 0;
-    max_fortele2 = tele2[0];
+    int i;
+    *imax_fortele2 = 0;
+    *max_fortele2 = tele2[0];
 
-    for (i = 0; i < 7; i++)                                      
-    {
-        if (tele2[i] > max_fortele2)  max_fortele2 = tele2[i], imax_fortele2 = i + 1;
+    for (i = 0; i < 6; i++) {
+        if (tele2[i] > *max_fortele2)
+            *max_fortele2 = tele2[i], *imax_fortele2 = i;
     }
 
-    cout <<"\n Максимальный элемент: "<<max_fortele2;
-    cout << "\n Индекс макс. элемента: " << imax_fortele2<<endl;
-
-    system("pause");
-    mainMenu();
+    cout << "\n Максимальный элемент(tele2): " << *max_fortele2;
+    cout << "\n Индекс макс. элемента(tele2): " << *imax_fortele2 << endl;
+    return 0;
 }
 
-void counting_for_mts()
+int counting_for_mts(int* max_mts, int* imax_mts)
 {
     system("cls");
     setlocale(LC_ALL, "Russian");
-    int  i;
-    int imax_mts, max_mts;
-    imax_mts = 0;
-    max_mts = tele2[0];
+    int i;
+    *imax_mts = 0;
+    *max_mts = mts[0];
 
-    for (i = 0; i < 8; i++)
-    {
-        if (tele2[i] > max_mts)  max_mts = tele2[i], imax_mts = i + 1;
+    for (i = 0; i < 7; i++) {
+        if (mts[i] > *max_mts)
+            *max_mts = mts[i], *imax_mts = i;
     }
 
-    cout << "\n Максимальный элемент: " << max_mts;
-    cout << "\n Индекс макс. элемента: " << imax_mts << endl;
+    cout << "\n Максимальный элемент(mts): " << *max_mts;
+    cout << "\n Индекс макс. элемента(mts): " << *imax_mts << endl;
 
-    system("pause");
-    mainMenu();
+    return 0;
 }
 
 void counting_for_megafon()
 {
     system("cls");
     setlocale(LC_ALL, "Russian");
-    int  i;
-    int imax_megafon,max_megafon;
+    int i;
+    int imax_megafon, max_megafon;
     imax_megafon = 0;
-   max_megafon = tele2[0];
+    max_megafon = tele2[0];
 
-    for (i = 0; i < 8; i++)
-    {
-        if (tele2[i] >max_megafon) max_megafon = tele2[i], imax_megafon = i + 1;
+    for (i = 0; i < 7; i++) {
+        if (tele2[i] > max_megafon)
+            max_megafon = tele2[i], imax_megafon = i + 1;
     }
 
-    cout << "\n Максимальный элемент: " <<max_megafon;
+    cout << "\n Максимальный элемент: " << max_megafon;
     cout << "\n Индекс макс. элемента: " << imax_megafon << endl;
 
     system("pause");
@@ -806,14 +803,14 @@ void counting_for_beeline()
 {
     system("cls");
     setlocale(LC_ALL, "Russian");
-    int  i;
+    int i;
     int imax_beeline, max_beeline;
     imax_beeline = 0;
     max_beeline = tele2[0];
 
-    for (i = 0; i < 9; i++)
-    {
-        if (tele2[i] > max_beeline) max_beeline = tele2[i], imax_beeline = i + 1;
+    for (i = 0; i < 8; i++) {
+        if (tele2[i] > max_beeline)
+            max_beeline = tele2[i], imax_beeline = i + 1;
     }
 
     cout << "\n Максимальный элемент: " << max_beeline;
@@ -827,14 +824,14 @@ void counting_for_yota()
 {
     system("cls");
     setlocale(LC_ALL, "Russian");
-    int  i;
+    int i;
     int imax_yota, max_yota;
     imax_yota = 0;
     max_yota = tele2[0];
 
-    for (i = 0; i < 9; i++)
-    {
-        if (tele2[i] > max_yota) max_yota = tele2[i], imax_yota = i + 1;
+    for (i = 0; i < 3; i++) {
+        if (tele2[i] > max_yota)
+            max_yota = tele2[i], imax_yota = i + 1;
     }
 
     cout << "\n Максимальный элемент: " << max_yota;
@@ -842,4 +839,19 @@ void counting_for_yota()
 
     system("pause");
     mainMenu();
+}
+
+int comparison()
+{
+    int imax_fortele2, max_fortele2;
+    counting_for_tele2(&max_fortele2, &imax_fortele2);
+    int imax_mts, max_mts;
+    counting_for_mts(&imax_mts, &max_mts);
+    system("CLS");
+    system("pause");
+    mainMenu();
+    return 0;
+    counting_for_megafon();
+    counting_for_beeline();
+    counting_for_yota();
 }
