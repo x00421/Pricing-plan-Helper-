@@ -778,25 +778,23 @@ int counting_for_mts(int* max_mts, int* imax_mts)
     return 0;
 }
 
-void counting_for_megafon()
+int counting_for_megafon(int* max_megafon, int* imax_megafon)
 {
     system("cls");
     setlocale(LC_ALL, "Russian");
     int i;
-    int imax_megafon, max_megafon;
-    imax_megafon = 0;
-    max_megafon = tele2[0];
+    *imax_megafon = 0;
+    *max_megafon = tele2[0];
 
     for (i = 0; i < 7; i++) {
-        if (tele2[i] > max_megafon)
-            max_megafon = tele2[i], imax_megafon = i + 1;
+        if (tele2[i] > *max_megafon)
+            *max_megafon = tele2[i], *imax_megafon = i + 1;
     }
 
-    cout << "\n Максимальный элемент: " << max_megafon;
-    cout << "\n Индекс макс. элемента: " << imax_megafon << endl;
+    cout << "\n Максимальный элемент: " << *max_megafon;
+    cout << "\n Индекс макс. элемента: " << *imax_megafon << endl;
 
-    system("pause");
-    mainMenu();
+    return 0;
 }
 
 void counting_for_beeline()
@@ -847,11 +845,8 @@ int comparison()
     counting_for_tele2(&max_fortele2, &imax_fortele2);
     int imax_mts, max_mts;
     counting_for_mts(&imax_mts, &max_mts);
-    system("CLS");
-    system("pause");
-    mainMenu();
-    return 0;
-    counting_for_megafon();
+    int imax_megafon, max_megafon;
+    counting_for_megafon(&imax_megafon, &max_megafon);
     counting_for_beeline();
     counting_for_yota();
 }
