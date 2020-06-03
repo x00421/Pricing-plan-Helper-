@@ -794,8 +794,8 @@ int counting_for_megafon(int* max_megafon, int* imax_megafon)
             *max_megafon = megafon[i], *imax_megafon = i;
     }
 
-    cout << "\n Максимальный элемент: " << *max_megafon;
-    cout << "\n Индекс макс. элемента: " << *imax_megafon << endl;
+    cout << "\n Максимальный элемент(megafon): " << *max_megafon;
+    cout << "\n Индекс макс. элемента(megafon): " << *imax_megafon << endl;
 
     return 0;
 }
@@ -813,8 +813,8 @@ int counting_for_beeline(int* max_beeline, int* imax_beeline)
             *max_beeline = beeline[i], *imax_beeline = i;
     }
 
-    cout << "\n Максимальный элемент: " << *max_beeline;
-    cout << "\n Индекс макс. элемента: " << *imax_beeline << endl;
+    cout << "\n Максимальный элемент(beeline): " << *max_beeline;
+    cout << "\n Индекс макс. элемента(beeline): " << *imax_beeline << endl;
 
     return 0;
 }
