@@ -261,7 +261,7 @@ void ob_operatorax()
 int question1()
 {
     system("cls");
-    cout << "\tДля каких целей вы чаще всего используете тлефон?" << endl
+    cout << "\tДля каких целей вы чаще всего используете телефон?" << endl
          << "1: Звонки и смс\n"
          << "2: Социальные сети\n"
          << "3: Сторонние сервисы(ютуб,браузер,мобильные игры и тд.\n"
@@ -274,7 +274,7 @@ int question1()
         cout << ">";
         cin >> choice;
         SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
-        if (choice < 1 || choice > 5)
+        if (choice < 1 || choice > 4)
             cout << "Ошибка,такого пункта не существует!" << endl;
         else
             y = 1;
@@ -379,7 +379,7 @@ int question2()
         cout << ">";
         cin >> choice;
         SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
-        if (choice < 1 || choice > 6)
+        if (choice < 1 || choice > 5)
             cout << "Ошибка,такого пункта не существует!" << endl;
         else
             y = 1;
@@ -428,7 +428,7 @@ int question3()
         cout << ">";
         cin >> choice;
         SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
-        if (choice < 1 || choice > 3)
+        if (choice < 1 || choice > 2)
             cout << "Ошибка,такого пункта не существует!" << endl;
         else
             y = 1;
@@ -460,7 +460,7 @@ int question4()
         cout << ">";
         cin >> choice;
         SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
-        if (choice < 1 || choice > 4)
+        if (choice < 1 || choice > 3)
             cout << "Ошибка,такого пункта не существует!" << endl;
         else
             y = 1;
@@ -539,7 +539,7 @@ int question5()
         cout << ">";
         cin >> choice;
         SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
-        if (choice < 1 || choice > 5)
+        if (choice < 1 || choice > 4)
             cout << "Ошибка,такого пункта не существует!" << endl;
         else
             y = 1;
@@ -605,7 +605,7 @@ int question6()
         cout << ">";
         cin >> choice;
         SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
-        if (choice < 1 || choice > 5)
+        if (choice < 1 || choice > 4)
             cout << "Ошибка,такого пункта не существует!" << endl;
         else
             y = 1;
@@ -674,7 +674,7 @@ int question7()
         cout << ">";
         cin >> choice;
         SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
-        if (choice < 1 || choice > 5)
+        if (choice < 1 || choice > 4)
             cout << "Ошибка,такого пункта не существует!" << endl;
         else
             y = 1;
@@ -692,6 +692,7 @@ int question7()
         beeline[2]++;
 
         yota[1]++;
+        comparison();
 
         break;
     case 2:
@@ -707,6 +708,7 @@ int question7()
         beeline[3]++;
 
         yota[2]++;
+        comparison();
 
         break;
     case 3:
@@ -718,6 +720,7 @@ int question7()
 
         beeline[1]++;
         beeline[4]++;
+        comparison();
 
         break;
     case 4:
@@ -788,7 +791,7 @@ int counting_for_megafon(int* max_megafon, int* imax_megafon)
 
     for (i = 0; i < 7; i++) {
         if (megafon[i] > *max_megafon)
-            *max_megafon = megafon[i], *imax_megafon = i + 1;
+            *max_megafon = megafon[i], *imax_megafon = i;
     }
 
     cout << "\n Максимальный элемент: " << *max_megafon;
@@ -797,46 +800,42 @@ int counting_for_megafon(int* max_megafon, int* imax_megafon)
     return 0;
 }
 
-void counting_for_beeline()
+int counting_for_beeline(int* max_beeline, int* imax_beeline)
 {
     system("cls");
     setlocale(LC_ALL, "Russian");
     int i;
-    int imax_beeline, max_beeline;
-    imax_beeline = 0;
-    max_beeline = tele2[0];
+    *imax_beeline = 0;
+    *max_beeline = beeline[0];
 
     for (i = 0; i < 8; i++) {
-        if (tele2[i] > max_beeline)
-            max_beeline = tele2[i], imax_beeline = i + 1;
+        if (beeline[i] > *max_beeline)
+            *max_beeline = beeline[i], *imax_beeline = i;
     }
 
-    cout << "\n Максимальный элемент: " << max_beeline;
-    cout << "\n Индекс макс. элемента: " << imax_beeline << endl;
+    cout << "\n Максимальный элемент: " << *max_beeline;
+    cout << "\n Индекс макс. элемента: " << *imax_beeline << endl;
 
-    system("pause");
-    mainMenu();
+    return 0;
 }
 
-void counting_for_yota()
+int counting_for_yota(int* max_yota, int* imax_yota)
 {
     system("cls");
     setlocale(LC_ALL, "Russian");
     int i;
-    int imax_yota, max_yota;
-    imax_yota = 0;
-    max_yota = tele2[0];
+    *imax_yota = 0;
+    *max_yota = yota[0];
 
     for (i = 0; i < 3; i++) {
-        if (tele2[i] > max_yota)
-            max_yota = tele2[i], imax_yota = i + 1;
+        if (yota[i] > *max_yota)
+            *max_yota = yota[i], *imax_yota = i;
     }
 
-    cout << "\n Максимальный элемент: " << max_yota;
-    cout << "\n Индекс макс. элемента: " << imax_yota << endl;
+    cout << "\n Максимальный элемент: " << *max_yota;
+    cout << "\n Индекс макс. элемента: " << *imax_yota << endl;
 
-    system("pause");
-    mainMenu();
+    return 0;
 }
 
 int comparison()
@@ -847,6 +846,9 @@ int comparison()
     counting_for_mts(&imax_mts, &max_mts);
     int imax_megafon, max_megafon;
     counting_for_megafon(&imax_megafon, &max_megafon);
-    counting_for_beeline();
-    counting_for_yota();
+    int imax_beeline, max_beeline;
+    counting_for_beeline(&imax_beeline, &max_beeline);
+    int imax_yota, max_yota;
+    counting_for_yota(&imax_yota, &max_yota);
+    return 0;
 }
