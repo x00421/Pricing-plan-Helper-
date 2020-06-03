@@ -1,4 +1,4 @@
-Pricing_plan_Helper:./build/src/main.o ./build/src/Menu.o ./build/src/comparison.o ./build/src/counting_for.o ./build/src/ob_operatorax.o ./build/src/questions.o
+Pricing_plan_Helper:./build/src/main.o ./build/src/Menu.o ./build/src/ob_operatorax.o ./build/src/questions.o ./build/src/counting_for.o  ./build/src/comparison.o 
 	g++ -std=c++17  ./build/src/main.o -o ./bin/Pricing_plan_Helper
 
 
