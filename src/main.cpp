@@ -12,7 +12,11 @@ int question4();
 int question5();
 int question6();
 int question7();
-void podchet();
+void counting_for_tele2();
+void counting_for_mts();
+void counting_for_megafon();
+void counting_for_beeline();
+void counting_for_yota();
 
 int tele2[6]; //баллы для каждого из тарифов оператора Теле 2
 // 0-Мой онлайн
@@ -687,7 +691,7 @@ int question7()
         beeline[2]++;
 
         yota[1]++;
-        podchet();
+
         break;
     case 2:
         tele2[1]++;
@@ -702,7 +706,7 @@ int question7()
         beeline[3]++;
 
         yota[2]++;
-        podchet();
+
         break;
     case 3:
         tele2[4]++;
@@ -713,7 +717,7 @@ int question7()
 
         beeline[1]++;
         beeline[4]++;
-        podchet();
+
         break;
     case 4:
         tele2[5]++;
@@ -728,14 +732,14 @@ int question7()
         beeline[5]++;
         beeline[6]++;
         beeline[7]++;
-        podchet();
+
         break;
     }
 
     return 0;
 }
 
-void podchet()
+void counting_for_tele2()
 {
     system("cls");
     setlocale(LC_ALL, "Russian");
@@ -751,6 +755,27 @@ void podchet()
 
     cout << "\n Максимальный элемент: " << max_fortele2;
     cout << "\n Индекс макс. элемента: " << imax_fortele2 << endl;
+
+    system("pause");
+    mainMenu();
+}
+
+void counting_for_mts()
+{
+    system("cls");
+    setlocale(LC_ALL, "Russian");
+    int i;
+    int imax_mts, max_mts;
+    imax_mts = 0;
+    max_mts = tele2[0];
+
+    for (i = 0; i < 8; i++) {
+        if (tele2[i] > max_mts)
+            max_mts = tele2[i], imax_mts = i + 1;
+    }
+
+    cout << "\n Максимальный элемент: " << max_mts;
+    cout << "\n Индекс макс. элемента: " << imax_mts << endl;
 
     system("pause");
     mainMenu();
