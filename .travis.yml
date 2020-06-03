@@ -1,4 +1,5 @@
 language: cpp
+os: windows
 compiler: g++
 dist: xenial
 script:
