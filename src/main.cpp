@@ -784,11 +784,11 @@ int counting_for_megafon(int* max_megafon, int* imax_megafon)
     setlocale(LC_ALL, "Russian");
     int i;
     *imax_megafon = 0;
-    *max_megafon = tele2[0];
+    *max_megafon = megafon[0];
 
     for (i = 0; i < 7; i++) {
-        if (tele2[i] > *max_megafon)
-            *max_megafon = tele2[i], *imax_megafon = i + 1;
+        if (megafon[i] > *max_megafon)
+            *max_megafon = megafon[i], *imax_megafon = i + 1;
     }
 
     cout << "\n Максимальный элемент: " << *max_megafon;
