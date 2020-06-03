@@ -1,8 +1,7 @@
 #include <iostream>
-#include <windows.h>
+
 using namespace std;
 
-HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 void mainMenu(); //функция для основного меню
 void ob_operatorax(); //функция вывода сведений об операторах
 int question1(); //вопрос
@@ -67,9 +66,9 @@ void mainMenu()
     //вывод пунктов меню
     system("cls");
     setlocale(LC_ALL, "Russian");
-    SetConsoleTextAttribute(hConsole, (WORD)((14 << 4) | 4));
+
     cout << "\t       Черноколпаков, Дудинский, Кичигин - ИП-915" << endl;
-    SetConsoleTextAttribute(hConsole, (WORD)((0 << 2) | 2));
+
     cout << "\t1-для запуска ассистента!\n"
          << "\t2-инструкция.\n"
          << "\t3-сведенья об операторах.\n"
@@ -79,10 +78,9 @@ void mainMenu()
 
     int choice; //для выбора пункта меню
     while (!y) {
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 2) | 2));
         cout << ">";
         cin >> choice;
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
+
         if (choice < 1 || choice > 4)
 
             cout << "Ошибка,такого пункта не существует!" << endl;
@@ -97,7 +95,7 @@ void mainMenu()
     case 2:
 
         system("cls");
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 5) | 5));
+
         cout << "\nДля запуска ассистента, помогающего выбрать тариф нажмите - "
                 "1\n"
              << "Чтобы узнать информацию об операторах нажмите - 3 \n"
@@ -123,7 +121,7 @@ void mainMenu()
 void ob_operatorax()
 {
     system("cls");
-    SetConsoleTextAttribute(hConsole, (WORD)((0 << 2) | 2));
+
     cout << "\t1-Теле 2\n"
          << "\t2-Мтс\n"
          << "\t3-Мегафон\n"
@@ -135,10 +133,9 @@ void ob_operatorax()
 
     int choice; //для выбора пункта меню
     while (!y) {
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 2) | 2));
         cout << ">";
         cin >> choice;
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
+
         if (choice < 1 || choice > 6)
             cout << "Ошибка,такого пункта не существует!" << endl;
         else
@@ -148,7 +145,7 @@ void ob_operatorax()
     case 1:
 
         system("cls");
-        SetConsoleTextAttribute(hConsole, (WORD)((7 << 0) | 0));
+
         cout << "\tТеле 2\n"
              << "\nTele2 Россия — российская телекоммуникационная компания, "
                 "основанная шведской группой компаний Tele2 AB\n"
@@ -171,7 +168,7 @@ void ob_operatorax()
     case 2:
 
         system("cls");
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 12) | 12));
+
         cout << "\tМТС\n"
              << "\nМТС («Мобильные ТелеСистемы», ПАО «МТС») — российская "
                 "телекоммуникационная компания,"
@@ -196,7 +193,7 @@ void ob_operatorax()
     case 3:
 
         system("cls");
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 10) | 10));
+
         cout << "\tМегафон\n"
              << "\n«МегаФон» — российская телекоммуникационная компания, "
                 "предоставляющая услуги сотовой связи (GSM, UMTS и LTE), \n"
@@ -216,7 +213,7 @@ void ob_operatorax()
     case 4:
 
         system("cls");
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 14) | 14));
+
         cout << "\tБилайн\n"
              << "\nПод маркой «Билайн» оказываются услуги сотовой (GSM, UMTS и "
                 "LTE) и фиксированной связи,\n"
@@ -235,7 +232,7 @@ void ob_operatorax()
     case 5:
 
         system("cls");
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 9) | 9));
+
         cout << "\tYota\n"
              << "\nТелекоммуникационная компания «Yota» была основана в 2007 "
                 "году. "
@@ -270,10 +267,9 @@ int question1()
 
     int choice; //для выбора пункта меню
     while (!y) {
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 2) | 2));
         cout << ">";
         cin >> choice;
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
+
         if (choice < 1 || choice > 4)
             cout << "Ошибка,такого пункта не существует!" << endl;
         else
@@ -375,10 +371,9 @@ int question2()
 
     int choice; //для выбора пункта меню
     while (!y) {
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 2) | 2));
         cout << ">";
         cin >> choice;
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
+
         if (choice < 1 || choice > 5)
             cout << "Ошибка,такого пункта не существует!" << endl;
         else
@@ -424,10 +419,9 @@ int question3()
 
     int choice; //для выбора пункта меню
     while (!y) {
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 2) | 2));
         cout << ">";
         cin >> choice;
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
+
         if (choice < 1 || choice > 2)
             cout << "Ошибка,такого пункта не существует!" << endl;
         else
@@ -456,10 +450,9 @@ int question4()
 
     int choice; //для выбора пункта меню
     while (!y) {
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 2) | 2));
         cout << ">";
         cin >> choice;
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
+
         if (choice < 1 || choice > 3)
             cout << "Ошибка,такого пункта не существует!" << endl;
         else
@@ -535,10 +528,9 @@ int question5()
 
     int choice; //для выбора пункта меню
     while (!y) {
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 2) | 2));
         cout << ">";
         cin >> choice;
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
+
         if (choice < 1 || choice > 4)
             cout << "Ошибка,такого пункта не существует!" << endl;
         else
@@ -601,10 +593,9 @@ int question6()
 
     int choice; //для выбора пункта меню
     while (!y) {
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 2) | 2));
         cout << ">";
         cin >> choice;
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
+
         if (choice < 1 || choice > 4)
             cout << "Ошибка,такого пункта не существует!" << endl;
         else
@@ -670,10 +661,9 @@ int question7()
 
     int choice; //для выбора пункта меню
     while (!y) {
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 2) | 2));
         cout << ">";
         cin >> choice;
-        SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 4));
+
         if (choice < 1 || choice > 4)
             cout << "Ошибка,такого пункта не существует!" << endl;
         else
