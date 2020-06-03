@@ -1,4 +1,5 @@
 #include "Menu.hpp"
+#include "globals.hpp"
 #include <iostream>
 using namespace std;
 
