@@ -902,6 +902,27 @@ int comparison()
     // 4
     int imax_yota, max_yota;
     counting_for_yota(&imax_yota, &max_yota);
+    cout << "\t         Из тарифов Yota вам больше всего подойдёт: " << endl;
+    switch (max_yota) {
+    case 0:
+        cout << "\tБольше интернета - 366,79уб/месяц" << endl
+             << "- 105 минут" << endl
+             << "- 15 ГБ" << endl;
+        system("pause");
+        break;
+    case 1:
+        cout << "\tБольше минут - 311,96уб/месяц" << endl
+             << "- 305 минут" << endl
+             << "- 5 ГБ" << endl;
+        system("pause");
+        break;
+    case 2:
+        cout << "\t ещё больше минут и интернета - 479,80уб/месяц" << endl
+             << "- 585 минут" << endl
+             << "- Безлимитный интернет" << endl;
+        system("pause");
+        break;
+    }
 
     system("pause");
     return 0;
