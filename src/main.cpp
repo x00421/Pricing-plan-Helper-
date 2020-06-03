@@ -757,8 +757,6 @@ int counting_for_tele2(int* max_fortele2, int* imax_fortele2)
             *max_fortele2 = tele2[i], *imax_fortele2 = i;
     }
 
-    cout << "\n Максимальный элемент(tele2): " << *max_fortele2;
-    cout << "\n Индекс макс. элемента(tele2): " << *imax_fortele2 << endl;
     return 0;
 }
 
@@ -840,15 +838,81 @@ int counting_for_yota(int* max_yota, int* imax_yota)
 
 int comparison()
 {
+    // 0
     int imax_fortele2, max_fortele2;
-    counting_for_tele2(&max_fortele2, &imax_fortele2);
+    counting_for_tele2(&imax_fortele2, &max_fortele2);
+
+    cout << "\t         Из тарифов Теле2 вам больше всего подойдёт: " << endl;
+
+    switch (imax_fortele2) {
+    case 0:
+        cout << "\tМой онлайн - 350руб/месяц" << endl
+             << "- безлимит на Tele2 России" << endl
+             << "- 400 минут на другие мобильные номера домашнего региона"
+             << endl
+             << "- 20 гигабайт" << endl
+             << "- Соцсети и мессенджеры безлимитно" << endl
+             << "- Скидка 10% на абонентскую плату при покупке и объединении в "
+                "группу 4 SIM";
+        system("pause");
+        break;
+    case 1:
+        cout << "\tМой онлайн+ - 450руб/месяц" << endl
+             << "- безлимит на Tele2 России" << endl
+             << "- 600 минут на остальные номера России" << endl
+             << "- 30 гигабайт" << endl
+             << "- Соцсети и мессенджеры безлимитно" << endl
+             << "- Скидка 10% на абонентскую плату при покупке и объединении в "
+                "группу 4 SIM";
+        system("pause");
+        break;
+    case 2:
+        cout << "\tМой разговор - 250руб/месяц" << endl
+             << "- безлимит на Tele2 России" << endl
+             << "- 200 минут на другие мобильные номера домашнего региона"
+             << endl
+             << "- 10 гигабайт" << endl
+             << "- Скидка 10% на абонентскую плату при покупке и объединении в "
+                "группу 4 SIM";
+        system("pause");
+        break;
+    case 3:
+        cout << "\tЛайт - 10руб/день" << endl
+             << "- безлимит на Tele2 России" << endl
+             << "- 15 гигабайт" << endl;
+        system("pause");
+        break;
+    case 4:
+        cout << "\tБезлимит - 650руб/месяц" << endl
+             << "- безлимит на Tele2 России" << endl
+             << "- 500 минут на остальные номера России" << endl
+             << "- безлимитный интернет" << endl;
+        system("pause");
+        break;
+    case 5:
+        cout << "\tПремиум - 1500руб/месяц" << endl
+             << "- безлимит на Tele2 России" << endl
+             << "- 2 000 минут" << endl
+             << "- Международный роуминг без доплат" << endl
+             << "- Безлимитные звонки внутри сети Tele2 России" << endl
+             << "- Обслуживание по выделенной линии";
+        system("pause");
+        break;
+    }
+
+    // 1
     int imax_mts, max_mts;
     counting_for_mts(&imax_mts, &max_mts);
+    // 2
     int imax_megafon, max_megafon;
     counting_for_megafon(&imax_megafon, &max_megafon);
+    // 3
     int imax_beeline, max_beeline;
     counting_for_beeline(&imax_beeline, &max_beeline);
+    // 4
     int imax_yota, max_yota;
     counting_for_yota(&imax_yota, &max_yota);
+
+    system("pause");
     return 0;
 }
