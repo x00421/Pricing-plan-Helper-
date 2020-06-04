@@ -23,7 +23,7 @@ Pricing_plan_Helper: ./build/src/main.o ./build/src/Menu.o ./build/src/ob_operat
 	g++ -std=c++17 -c ./src/questions.cpp -o ./build/src/questions.o -lm
 
 clean:
-	rm -rf ./build/src/*.o ./build/test/*.o
+	rm -rf ./build/src/*.o ./build/test/*.o ./bin/*.exe
 
 test:  ./build/src/Menu.o ./build/src/ob_operatorax.o ./build/src/questions.o ./build/src/counting_for.o  ./build/src/comparison.o ./build/test/test.o
 	g++ -std=c++17 -o ./bin/test ./build/src/Menu.o ./build/src/ob_operatorax.o ./build/src/questions.o ./build/src/counting_for.o  ./build/src/comparison.o  ./build/test/test.o -lm

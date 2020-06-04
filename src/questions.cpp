@@ -16,10 +16,10 @@ int question7(int* tele2, int* mts, int* megafon, int* beeline, int* yota);
 int question1(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 {
     system("cls");
-cout << "\tДля каких целей вы чаще всего используете телефон?" << endl
+    cout << "\tДля каких целей вы чаще всего используете телефон?" << endl
          << "1: Звонки и смс\n"
          << "2: Социальные сети\n"
-         << "3: Сторонние сервисы(ютуб,браузер,мобильные игры и тд.\n"
+         << "3: Сторонние сервисы (ютуб, браузер, мобильные игры и тд.)\n"
          << "4: Все вариаты\n\n";
     bool y = 0;
 
@@ -29,88 +29,118 @@ cout << "\tДля каких целей вы чаще всего использ�
         cin >> choice;
 
         if (choice < 1 || choice > 4)
-            cout << "Ошибка,такого пункта не существует!" << endl;
+            cout << "Ошибка, такого пункта не существует!" << endl;
         else
             y = 1;
     }
     switch (choice) {
     case 1:
-        megafon[0] += 1;
-        megafon[1] += 1;
-        megafon[5] += 1;
-        megafon[6] += 1;
-
-        tele2[1] += 1;
-        tele2[4] += 1;
-        tele2[5] += 1;
-
-        mts[0] += 1;
-        mts[2] += 1;
-        mts[5] += 1;
-        mts[6] += 1;
-
-        for (int i = 0; i < 8; i++) {
-            if (i != 2) {
-                beeline[i] += 1;
+        for (int i = 0; i < 7; i++) { // megafon
+            if ((i < 2) || (i > 4)) {
+                megafon[i]++;
+            }
+        }
+        for (int i = 0; i < 6; i++) { // tele2
+            if ((i == 1) || (i > 3)) {
+                tele2[i]++;
+            }
+        }
+        for (int i = 0; i < 7; i++) { // mts
+            if ((i == 0) || (i == 2) || (i > 4)) {
+                mts[i]++;
             }
         }
 
-        yota[2] += 1;
-        cout << megafon[0];
+        for (int i = 0; i < 8; i++) { // beeline
+            if (i != 2) {
+                beeline[i]++;
+            }
+        }
+        for (int i = 0; i < 3; i++) { // yota
+            if (i == 2) {
+                yota[i]++;
+            }
+        }
         question2(tele2, mts, megafon, beeline, yota);
         break;
     case 2:
-        for (int i = 4; i < 8; i++) {
-            beeline[i] += 1;
-        }
-        yota[2] += 1;
-        for (int i = 0; i < 7; i++) {
-            if (i != 1 || i != 4) {
-                mts[i] += 1;
+        for (int i = 0; i < 8; i++) { // beeline
+            if (i > 3) {
+                beeline[i]++;
             }
         }
-
-        tele2[4] += 1;
-        tele2[5] += 1;
-
-        megafon[0] += 1;
-        megafon[5] += 1;
-        megafon[6] += 1;
+        for (int i = 0; i < 3; i++) { // yota
+            if (i == 2) {
+                yota[i]++;
+            }
+        }
+        for (int i = 0; i < 7; i++) { // mts
+            if (i != 1 || i != 4) {
+                mts[i]++;
+            }
+        }
+        for (int i = 0; i < 6; i++) { // tele2
+            if ((i == 4) || (i == 5)) {
+                tele2[i]++;
+            }
+        }
+        for (int i = 0; i < 7; i++) { // megafon
+            if ((i == 0) || (i > 4)) {
+                megafon[i]++;
+            }
+        }
         question2(tele2, mts, megafon, beeline, yota);
     case 3:
-        yota[2] += 1;
-        for (int i = 4; i < 8; i++) {
-            beeline[i] += 1;
-        }
-        for (int i = 0; i < 7; i++) {
-            if (i != 1 || i != 4 || i != 3) {
-                mts[i] += 1;
+        for (int i = 0; i < 3; i++) { // yota
+            if (i == 2) {
+                yota[i]++;
             }
         }
-        tele2[4] += 1;
-        tele2[5] += 1;
-
-        megafon[0] += 1;
-        megafon[5] += 1;
-        megafon[6] += 1;
+        for (int i = 0; i < 8; i++) { // beeline
+            if (i > 3) {
+                beeline[i]++;
+            }
+        }
+        for (int i = 0; i < 7; i++) { // mts
+            if (i != 1 || i != 4 || i != 3) {
+                mts[i]++;
+            }
+        }
+        for (int i = 0; i < 6; i++) { // tele2
+            if ((i == 4) || (i == 5)) {
+                tele2[i]++;
+            }
+        }
+        for (int i = 0; i < 7; i++) { // megafon
+            if ((i == 0) || (i > 4)) {
+                megafon[i]++;
+            }
+        }
         question2(tele2, mts, megafon, beeline, yota);
     case 4:
-        megafon[0] += 1;
-        megafon[5] += 1;
-        megafon[6] += 1;
+        for (int i = 0; i < 7; i++) { // megafon
+            if ((i == 0) || (i > 4)) {
+                megafon[i]++;
+            }
+        }
+        for (int i = 0; i < 6; i++) { // tele2
+            if (i == 5) {
+                tele2[i]++;
+            }
+        }
+        for (int i = 0; i < 7; i++) { // mts
+            if ((i == 2) || (i > 4)) {
+                mts[i]--;
+            }
+        }
 
-        tele2[5] += 1;
-
-        mts[2] += 1;
-        mts[5] += 1;
-        mts[6] += 1;
-
-        for (int i = 4; i < 8; i++) {
-            beeline[i] += 1;
+        for (int i = 0; i < 8; i++) { // beeline
+            if (i > 3) {
+                beeline[i]++;
+            }
         }
         question2(tele2, mts, megafon, beeline, yota);
     }
-
     return 0;
 }
 
@@ -118,7 +148,7 @@ int question2(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 {
     system("cls");
     cout << "\tКакой мобильный оператор наиболее популярен среди ваших "
-            "родственников(знакомых)?"
+            "родственников (знакомых)?"
          << endl
          << "1: Теле 2\n"
          << "2: Мтс\n"
@@ -133,7 +163,7 @@ int question2(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         cin >> choice;
 
         if (choice < 1 || choice > 5)
-            cout << "Ошибка,такого пункта не существует!" << endl;
+            cout << "Ошибка, такого пункта не существует!" << endl;
         else
             y = 1;
     }
@@ -181,7 +211,7 @@ int question3(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         cin >> choice;
 
         if (choice < 1 || choice > 2)
-            cout << "Ошибка,такого пункта не существует!" << endl;
+            cout << "Ошибка, такого пункта не существует!" << endl;
         else
             y = 1;
     }
@@ -212,67 +242,94 @@ int question4(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         cin >> choice;
 
         if (choice < 1 || choice > 3)
-            cout << "Ошибка,такого пункта не существует!" << endl;
+            cout << "Ошибка, такого пункта не существует!" << endl;
         else
             y = 1;
     }
     switch (choice) {
     case 1:
-        tele2[2] += 1;
-
-        mts[3] += 1;
-        mts[4] += 1;
-
-        megafon[2] += 1;
-        megafon[4] += 1;
-
-        yota[0] += 1;
+        for (int i = 0; i < 7; i++) { // megafon
+            if ((i == 2) || (i == 4)) {
+                megafon[i]++;
+            }
+        }
+        for (int i = 0; i < 6; i++) { // tele2
+            if (i == 2) {
+                tele2[i]++;
+            }
+        }
+        for (int i = 0; i < 7; i++) { // mts
+            if ((i == 3) || (i == 4)) {
+                mts[i]++;
+            }
+        }
+        for (int i = 0; i < 8; i++) { // beeline
+            beeline[i]--;
+        }
+        for (int i = 0; i < 3; i++) { // yota
+            if (i == 0) {
+                yota[i]++;
+            }
+        }
         question5(tele2, mts, megafon, beeline, yota);
         break;
     case 2:
-        tele2[0] += 1;
-        tele2[4] += 1;
-
-        mts[0] += 1;
-        mts[1] += 1;
-
-        megafon[2] += 1;
-        megafon[3] += 1;
-
-        beeline[0] += 1;
-        beeline[2] += 1;
-
-        yota[1] += 1;
+        for (int i = 0; i < 7; i++) { // megafon
+            if ((i == 2) || (i == 3)) {
+                megafon[i]++;
+            }
+        }
+        for (int i = 0; i < 6; i++) { // tele2
+            if ((i == 0) || (i == 4)) {
+                tele2[i]++;
+            }
+        }
+        for (int i = 0; i < 7; i++) { // mts
+            if ((i == 0) || (i == 1)) {
+                mts[i]++;
+            }
+        }
+        for (int i = 0; i < 8; i++) { // beeline
+            if ((i == 0) || (i == 2)) {
+                beeline[i]++;
+            }
+        }
+        for (int i = 0; i < 3; i++) { // yota
+            if (i == 1) {
+                yota[i]++;
+            }
+        }
         question5(tele2, mts, megafon, beeline, yota);
         break;
     case 3:
-        tele2[1] += 1;
-        tele2[3] += 1;
-        tele2[4] += 1;
-        tele2[5] += 1;
-
-        mts[2] += 1;
-        mts[5] += 1;
-        mts[6] += 1;
-
-        megafon[0] += 1;
-        megafon[1] += 1;
-        megafon[5] += 1;
-        megafon[6] += 1;
-
-        beeline[0] += 1;
-        beeline[1] += 1;
-        beeline[3] += 1;
-        beeline[4] += 1;
-        beeline[5] += 1;
-        beeline[6] += 1;
-        beeline[7] += 1;
-
-        yota[2] += 1;
+        for (int i = 0; i < 7; i++) { // megafon
+            if ((i < 2) || (i > 4)) {
+                megafon[i]++;
+            }
+        }
+        for (int i = 0; i < 6; i++) { // tele2
+            if ((i == 1) || (i > 2)) {
+                tele2[i]++;
+            }
+        }
+        for (int i = 0; i < 7; i++) { // mts
+            if ((i == 2) || (i > 4)) {
+                mts[i]++;
+            }
+        }
+        for (int i = 0; i < 8; i++) { // beeline
+            if ((i < 2) || (i > 2)) {
+                beeline[i]++;
+            }
+        }
+        for (int i = 0; i < 3; i++) { // yota
+            if (i == 2) {
+                yota[i]++;
+            }
+        }
         question5(tele2, mts, megafon, beeline, yota);
         break;
     }
-
     return 0;
 }
 
@@ -292,43 +349,44 @@ int question5(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         cin >> choice;
 
         if (choice < 1 || choice > 4)
-            cout << "Ошибка,такого пункта не существует!" << endl;
+            cout << "Ошибка, такого пункта не существует!" << endl;
         else
             y = 1;
     }
     switch (choice) {
     case 1:
-        megafon[0]++;
-        megafon[5]++;
-        megafon[6]++;
-
-        for (int i = 0; i < 7; i++) {
-            mts[i] += 1;
+        for (int i = 0; i < 7; i++) { // megafon
+            if ((i == 0) || (i > 4)) {
+                megafon[i]++;
+            }
         }
-
-        for (int i = 0; i < 9; i++) {
-            beeline[i] += 1;
+        for (int i = 0; i < 7; i++) { // mts
+            mts[i]++;
+        }
+        for (int i = 0; i < 8; i++) { // beeline
+            beeline[i]++;
         }
         question6(tele2, mts, megafon, beeline, yota);
         break;
     case 2:
-        megafon[0]++;
-        megafon[5]++;
-        megafon[6]++;
-
-        for (int i = 0; i < 5; i++) {
-            mts[i] += 1;
+        for (int i = 0; i < 7; i++) { // mts
+            mts[i]++;
+        }
+        for (int i = 0; i < 8; i++) { // beeline
+            beeline[i]++;
+        }
+        for (int i = 0; i < 7; i++) { // megafon
+            if ((i == 0) || (i > 4)) {
+                megafon[i]++;
+            }
         }
 
-        for (int i = 0; i < 9; i++) {
-            beeline[i] += 1;
-        }
         question6(tele2, mts, megafon, beeline, yota);
         break;
     case 3:
         for (int i = 0; i < 7; i++) {
             if (i != 2 || i != 3 || i != 4) {
-                mts[i] += 1;
+                mts[i]++;
             }
         }
         question6(tele2, mts, megafon, beeline, yota);
@@ -357,54 +415,121 @@ int question6(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         cin >> choice;
 
         if (choice < 1 || choice > 4)
-            cout << "Ошибка,такого пункта не существует!" << endl;
+            cout << "Ошибка, такого пункта не существует!" << endl;
         else
             y = 1;
     }
     switch (choice) {
     case 1:
-        mts[4]++;
-        megafon[3]++;
-        megafon[4]++;
-        yota[1]++;
+        for (int i = 0; i < 7; i++) { // megafon
+            if ((i == 3) || (i == 4)) {
+                megafon[i]++;
+            }
+        }
+        for (int i = 0; i < 6; i++) { // tele2
+            if ((i == 0) || (i == 4)) {
+                tele2[i]++;
+            }
+        }
+        for (int i = 0; i < 7; i++) { // mts
+            if (i == 4) {
+                mts[i]++;
+            }
+        }
+        for (int i = 0; i < 8; i++) { // beeline
+            if ((i == 0) || (i == 2)) {
+                beeline[i]++;
+            }
+        }
+        for (int i = 0; i < 3; i++) { // yota
+            if (i == 1) {
+                yota[i]++;
+            }
+        }
         question7(tele2, mts, megafon, beeline, yota);
     case 2:
-        mts[3]++;
-        mts[4]++;
-        tele2[2]++;
-        megafon[2]++;
+        for (int i = 0; i < 7; i++) { // megafon
+            if (i == 2) {
+                megafon[i]++;
+            }
+        }
+        for (int i = 0; i < 6; i++) { // tele2
+            if (i == 2) {
+                tele2[i]++;
+            }
+        }
+        for (int i = 0; i < 7; i++) { // mts
+            if ((i == 3) || (i == 4)) {
+                mts[i]++;
+            }
+        }
+        for (int i = 0; i < 8; i++) { // beeline
+            if ((i == 0) || (i == 2)) {
+                beeline[i]++;
+            }
+        }
+        for (int i = 0; i < 3; i++) { // yota
+            if (i == 1) {
+                yota[i]++;
+            }
+        }
         question7(tele2, mts, megafon, beeline, yota);
     case 3:
-        beeline[0]++;
-        beeline[1]++;
-        beeline[2]++;
-        beeline[3]++;
-        mts[1]++;
-        tele2[0]++;
-        tele2[2]++;
-        tele2[3]++;
-        megafon[1]++;
-        megafon[2]++;
-        yota[0]++;
+        for (int i = 0; i < 7; i++) { // megafon
+            if ((i == 1) || (i == 2)) {
+                megafon[i]++;
+            }
+        }
+        for (int i = 0; i < 6; i++) { // tele2
+            if ((i == 0) || (i == 2)) {
+                tele2[i]++;
+            }
+        }
+        for (int i = 0; i < 7; i++) { // mts
+            if (i == 1) {
+                mts[i]++;
+            }
+        }
+        for (int i = 0; i < 8; i++) { // beeline
+            if (i < 4) {
+                beeline[i]++;
+            }
+        }
+        for (int i = 0; i < 3; i++) { // yota
+            if (i == 0) {
+                yota[i]++;
+            }
+        }
+
         question7(tele2, mts, megafon, beeline, yota);
     case 4:
-        yota[2]++;
-        beeline[4]++;
-        beeline[5]++;
-        beeline[6]++;
-        beeline[7]++;
-        mts[0]++;
-        mts[2]++;
-        mts[5]++;
-        mts[6]++;
-        tele2[4]++;
-        tele2[5]++;
-        megafon[0]++;
-        megafon[5]++;
-        megafon[6]++;
+        for (int i = 0; i < 7; i++) { // megafon
+            if ((i == 0) || (i == 5) || (i == 6)) {
+                megafon[i]++;
+            }
+        }
+        for (int i = 0; i < 6; i++) { // tele2
+            if ((i == 4) || (i == 5)) {
+                tele2[i]++;
+            }
+        }
+        for (int i = 0; i < 7; i++) { // mts
+            if ((i == 0) || (i == 2) || (i == 5) || (i == 6)) {
+                mts[i]++;
+            }
+        }
+        for (int i = 0; i < 8; i++) { // beeline
+            if (i > 3 || i < 7) {
+                beeline[i]++;
+            }
+        }
+        for (int i = 0; i < 3; i++) { // yota
+            if (i == 2) {
+                yota[i]++;
+            }
+        }
         question7(tele2, mts, megafon, beeline, yota);
     }
-
     return 0;
 }
 
@@ -425,7 +550,7 @@ int question7(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         cin >> choice;
 
         if (choice < 1 || choice > 4)
-            cout << "Ошибка,такого пункта не существует!" << endl;
+            cout << "Ошибка, такого пункта не существует!" << endl;
         else
             y = 1;
     }
@@ -435,144 +560,129 @@ int question7(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         tele2[2]++;
         tele2[3]++;
 
-        tele2[1] = 0; //зануление не подходящих тарифов
-        tele2[4] = 0;
-        tele2[5] = 0;
-
         for (int i = 0; i < 7; i++) {
-            mts[i] = 0;
+            mts[i] -= 1;
         }
-
-        megafon[2]++;
-        megafon[3]++;
-        megafon[4]++;
 
         for (int i = 0; i < 7; i++) {
             if ((i < 2) || (i > 4))
-                megafon[i] = 0;
+                megafon[i]--;
+            else
+                megafon[i]++;
         }
-        beeline[2]++;
 
         for (int i = 0; i < 8; i++) {
             if (i != 2)
-                beeline[i] = 0;
+                beeline[i]--;
+            else
+                beeline[i]++;
         }
         yota[1]++;
         yota[0]++;
-        yota[2] = 0;
+        yota[2]--;
         comparison(tele2, mts, megafon, beeline, yota);
 
         break;
     case 2:
-        tele2[1]++;
 
         for (int i = 0; i < 6; i++) {
             if (i != 1)
-                tele2[i] = 0;
+                tele2[i]--;
+            else
+                tele2[i]++;
         }
-
-        mts[1]++;
-        mts[3]++;
-        mts[4]++;
 
         for (int i = 0; i < 7; i++) {
-            if (i != 1 || i != 3 || i != 4 )
-                mts[i] = 0;
+            if (i != 1 || i != 3 || i != 4)
+                mts[i]--;
+            else
+                mts[i]++;
         }
-
-        megafon[1]++;
 
         for (int i = 0; i < 7; i++) {
-            if (i != 1 )
-                megafon[i] = 0;
+            if (i != 1)
+                megafon[i]--;
+            else
+                megafon[i]++;
         }
-
-        beeline[0]++;
-        beeline[3]++;
 
         for (int i = 0; i < 8; i++) {
-            if (i != 0 || i != 3 )
-                beeline[i] = 0;
+            if (i != 0 || i != 3)
+                beeline[i]--;
+            else
+                beeline[i]++;
         }
-
         yota[2]++;
-        yota[0] = 0;
-        yota[1] = 0;
+        yota[0]--;
+        yota[1]--;
         comparison(tele2, mts, megafon, beeline, yota);
-
         break;
     case 3:
-        tele2[4]++;
-
         for (int i = 0; i < 6; i++) {
             if (i != 4)
-                tele2[i] = 0;
+                tele2[i]--;
+            else
+                tele2[i]++;
         }
-
-        mts[0]++;
 
         for (int i = 0; i < 7; i++) {
             if (i != 0)
-                mts[i] = 0;
+                mts[i]--;
+            else
+                mts[i]++;
         }
-
-        megafon[0]++;
 
         for (int i = 0; i < 7; i++) {
             if (i != 0)
-                megafon[i] = 0;
+                megafon[i]--;
+            else
+                megafon[i]++;
         }
-
-        beeline[1]++;
-        beeline[4]++;
 
         for (int i = 0; i < 8; i++) {
             if (i != 1 || i != 4)
-                beeline[i] = 0;
+                beeline[i]--;
+            else
+                beeline[i]++;
         }
         for (int i = 0; i < 3; i++) {
-                yota[i] = 0;
+            yota[i]--;
         }
         comparison(tele2, mts, megafon, beeline, yota);
-
         break;
     case 4:
-        tele2[5]++;
 
         for (int i = 0; i < 6; i++) {
             if (i != 5)
-                tele2[i] = 0;
+                tele2[i]--;
+            else
+                tele2[i]++;
         }
-        mts[2]++;
-        mts[5]++;
-        mts[6]++;
-
         for (int i = 0; i < 7; i++) {
             if (i != 2 || i != 5 || i != 6)
-                mts[i] = 0;
+                mts[i]--;
+            else
+                mts[i]++;
         }
-        megafon[5]++;
-        megafon[6]++;
-
         for (int i = 0; i < 7; i++) {
             if (i != 5 || i != 6)
-                megafon[i] = 0;
+                megafon[i]--;
+            else
+                megafon[i]++;
         }
-        beeline[5]++;
-        beeline[6]++;
-        beeline[7]++;
 
         for (int i = 0; i < 8; i++) {
             if (i != 5 || i != 6 || i != 7)
-                beeline[i] = 0;
+                beeline[i]--;
+            else
+                beeline[i]++;
         }
         for (int i = 0; i < 3; i++) {
-                yota[i] = 0;
+            yota[i]--;
         }
         comparison(tele2, mts, megafon, beeline, yota);
 
         break;
     }
-
     return 0;
 }
