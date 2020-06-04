@@ -47,7 +47,7 @@ void ob_operatorax(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << endl;
 
         system("pause");
-        ob_operatorax(tele2, mts, megafon,beeline,yota);
+        ob_operatorax(tele2, mts, megafon, beeline, yota);
         break;
     case 2:
 
@@ -72,7 +72,7 @@ void ob_operatorax(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << "\n"
              << endl;
         system("pause");
-        ob_operatorax(tele2, mts, megafon,beeline,yota);
+        ob_operatorax(tele2, mts, megafon, beeline, yota);
         break;
     case 3:
 
@@ -91,7 +91,7 @@ void ob_operatorax(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << "Компания под нынешним брендом образована в мае 2002 года.\n"
              << endl;
         system("pause");
-        ob_operatorax(tele2, mts, megafon,beeline,yota);
+        ob_operatorax(tele2, mts, megafon, beeline, yota);
         break;
 
     case 4:
@@ -110,7 +110,7 @@ void ob_operatorax(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
                 "медиа.\n"
              << endl;
         system("pause");
-        ob_operatorax(tele2, mts, megafon,beeline,yota);
+        ob_operatorax(tele2, mts, megafon, beeline, yota);
         break;
 
     case 5:
@@ -130,7 +130,7 @@ void ob_operatorax(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << "\n"
              << endl;
         system("pause");
-        ob_operatorax(tele2, mts, megafon,beeline,yota);
+        ob_operatorax(tele2, mts, megafon, beeline, yota);
         break;
 
     case 6:
