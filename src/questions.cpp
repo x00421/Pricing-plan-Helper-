@@ -35,28 +35,43 @@ int question1(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
     }
     switch (choice) {
     case 1:
-        megafon[0] += 1;
-        megafon[1] += 1;
-        megafon[5] += 1;
-        megafon[6] += 1;
-
-        tele2[1] += 1;
-        tele2[4] += 1;
-        tele2[5] += 1;
-
-        mts[0] += 1;
-        mts[2] += 1;
-        mts[5] += 1;
-        mts[6] += 1;
-
-        for (int i = 0; i < 8; i++) {
-            if (i != 2) {
-                beeline[i] += 1;
+        for (int i = 0; i < 7; i++) { // megafon
+            if ((i < 2) || (i > 4)) {
+                megafon[i]++;
+            } else {
+                megafon[i]--;
+            }
+        }
+        for (int i = 0; i < 6; i++) { // tele2
+            if ((i == 1) || (i > 3)) {
+                tele2[i]++;
+            } else {
+                tele2[i]--;
+            }
+        }
+        for (int i = 0; i < 7; i++) { // mts
+            if ((i == 0) || (i == 2) || (i > 4)) {
+                mts[i]++;
+            } else {
+                mts[i]--;
             }
         }
 
+        for (int i = 0; i < 8; i++) { // beeline
+            if (i != 2) {
+                beeline[i]++;
+            } else {
+                beeline[i]--;
+            }
+        }
+        for (int i = 0; i < 3; i++) { // yota
+            if (i == 2) {
+                beeline[i]++;
+            } else {
+                beeline[i]--;
+            }
+        }
         yota[2] += 1;
-        cout << megafon[0];
         question2(tele2, mts, megafon, beeline, yota);
         break;
     case 2:
