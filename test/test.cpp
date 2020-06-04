@@ -8,6 +8,29 @@
 #include <iostream>
 #include <string.h>
 using namespace std;
+
+TEST_CASE("check comparison", "[comparison]")
+{
+    const int n = 3;
+    int max, imax, tele2[n], mts[n], megafon[n], beeline[n], yota[n], z,
+            imax_fortele2 = 1;
+
+    int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota);
+
+    z = comparison(tele2, mts, megafon, beeline, yota);
+
+    REQUIRE(cout
+            << "\tМой онлайн+ - 450руб/месяц" << endl
+            << "- безлимит на Tele2 России" << endl
+            << "- 600 минут на остальные номера России" << endl
+            << "- 30 гигабайт" << endl
+            << "- Соцсети и мессенджеры безлимитно" << endl
+            << "- Скидка 10% на абонентскую плату при покупке и объединении в "
+               "группу 4 SIM"
+            << endl
+            << endl);
+}
+
 TEST_CASE(
         "check counting_for_tele2 for max element and index",
         "[counting_for_tele2]")

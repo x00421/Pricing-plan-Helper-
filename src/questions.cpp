@@ -6,6 +6,7 @@
 #include <iostream>
 using namespace std;
 
+int question1(int* tele2, int* mts, int* megafon, int* beeline, int* yota);
 int question2(int* tele2, int* mts, int* megafon, int* beeline, int* yota);
 int question3(int* tele2, int* mts, int* megafon, int* beeline, int* yota);
 int question4(int* tele2, int* mts, int* megafon, int* beeline, int* yota);
