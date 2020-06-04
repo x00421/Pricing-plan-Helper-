@@ -1,4 +1,6 @@
-Pricing_plan_Helper: ./build/src/main.o ./build/src/Menu.o ./build/src/ob_operatorax.o ./build/src/questions.o ./build/src/counting_for.o  ./build/src/comparison.o
+all:Pricing_plan_Helper test
+
+Pricing_plan_Helper: ./build/src/main.o ./build/src/Menu.o ./build/src/ob_operatorax.o ./build/src/questions.o ./build/src/counting_for.o  ./build/src/comparison.o 
 	g++ -std=c++17 ./build/src/main.o ./build/src/Menu.o ./build/src/ob_operatorax.o ./build/src/questions.o ./build/src/counting_for.o  ./build/src/comparison.o -o ./bin/Pricing_plan_Helper
 
 
@@ -23,3 +25,9 @@ Pricing_plan_Helper: ./build/src/main.o ./build/src/Menu.o ./build/src/ob_operat
 clean:
 	rm -rf ./build/src/*.o ./build/test/*.o
 
+test:  ./build/src/Menu.o ./build/src/ob_operatorax.o ./build/src/questions.o ./build/src/counting_for.o  ./build/src/comparison.o ./build/test/test.o
+	g++ -std=c++17 -o ./bin/test ./build/src/Menu.o ./build/src/ob_operatorax.o ./build/src/questions.o ./build/src/counting_for.o  ./build/src/comparison.o  ./build/test/test.o -lm
+	./bin/test
+
+./build/test/test.o: ./test/test.cpp
+	g++ -std=c++17 -c ./test/test.cpp  -o  ./build/test/test.o -lm
