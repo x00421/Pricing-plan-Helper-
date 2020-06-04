@@ -16,7 +16,7 @@ int question7(int* tele2, int* mts, int* megafon, int* beeline, int* yota);
 int question1(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 {
     system("cls");
-    cout << "\tДля каких целей вы чаще всего используете телефон?" << endl
+cout << "\tДля каких целей вы чаще всего используете телефон?" << endl
          << "1: Звонки и смс\n"
          << "2: Социальные сети\n"
          << "3: Сторонние сервисы(ютуб,браузер,мобильные игры и тд.\n"
@@ -203,7 +203,7 @@ int question4(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
     cout << "\tСколько минут в среднем вы тратите на разговоры в месяц?" << endl
          << "1: 100-300\n"
          << "2: 300-500\n"
-         << "3: Более 500\n";
+         << "3: 500+\n";
     bool y = 0;
 
     int choice; //для выбора пункта меню
@@ -248,6 +248,7 @@ int question4(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
     case 3:
         tele2[1] += 1;
         tele2[3] += 1;
+        tele2[4] += 1;
         tele2[5] += 1;
 
         mts[2] += 1;
@@ -259,6 +260,7 @@ int question4(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         megafon[5] += 1;
         megafon[6] += 1;
 
+        beeline[0] += 1;
         beeline[1] += 1;
         beeline[3] += 1;
         beeline[4] += 1;
@@ -433,57 +435,140 @@ int question7(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         tele2[2]++;
         tele2[3]++;
 
+        tele2[1] = 0; //зануление не подходящих тарифов
+        tele2[4] = 0;
+        tele2[5] = 0;
+
+        for (int i = 0; i < 7; i++) {
+            mts[i] = 0;
+        }
+
         megafon[2]++;
         megafon[3]++;
         megafon[4]++;
 
+        for (int i = 0; i < 7; i++) {
+            if ((i < 2) || (i > 4))
+                megafon[i] = 0;
+        }
         beeline[2]++;
 
+        for (int i = 0; i < 8; i++) {
+            if (i != 2)
+                beeline[i] = 0;
+        }
         yota[1]++;
+        yota[0]++;
+        yota[2] = 0;
         comparison(tele2, mts, megafon, beeline, yota);
 
         break;
     case 2:
         tele2[1]++;
 
+        for (int i = 0; i < 6; i++) {
+            if (i != 1)
+                tele2[i] = 0;
+        }
+
         mts[1]++;
         mts[3]++;
         mts[4]++;
 
+        for (int i = 0; i < 7; i++) {
+            if (i != 1 || i != 3 || i != 4 )
+                mts[i] = 0;
+        }
+
         megafon[1]++;
+
+        for (int i = 0; i < 7; i++) {
+            if (i != 1 )
+                megafon[i] = 0;
+        }
 
         beeline[0]++;
         beeline[3]++;
 
+        for (int i = 0; i < 8; i++) {
+            if (i != 0 || i != 3 )
+                beeline[i] = 0;
+        }
+
         yota[2]++;
+        yota[0] = 0;
+        yota[1] = 0;
         comparison(tele2, mts, megafon, beeline, yota);
 
         break;
     case 3:
         tele2[4]++;
 
+        for (int i = 0; i < 6; i++) {
+            if (i != 4)
+                tele2[i] = 0;
+        }
+
         mts[0]++;
+
+        for (int i = 0; i < 7; i++) {
+            if (i != 0)
+                mts[i] = 0;
+        }
 
         megafon[0]++;
 
+        for (int i = 0; i < 7; i++) {
+            if (i != 0)
+                megafon[i] = 0;
+        }
+
         beeline[1]++;
         beeline[4]++;
+
+        for (int i = 0; i < 8; i++) {
+            if (i != 1 || i != 4)
+                beeline[i] = 0;
+        }
+        for (int i = 0; i < 3; i++) {
+                yota[i] = 0;
+        }
         comparison(tele2, mts, megafon, beeline, yota);
 
         break;
     case 4:
         tele2[5]++;
 
+        for (int i = 0; i < 6; i++) {
+            if (i != 5)
+                tele2[i] = 0;
+        }
         mts[2]++;
         mts[5]++;
         mts[6]++;
 
+        for (int i = 0; i < 7; i++) {
+            if (i != 2 || i != 5 || i != 6)
+                mts[i] = 0;
+        }
         megafon[5]++;
         megafon[6]++;
 
+        for (int i = 0; i < 7; i++) {
+            if (i != 5 || i != 6)
+                megafon[i] = 0;
+        }
         beeline[5]++;
         beeline[6]++;
         beeline[7]++;
+
+        for (int i = 0; i < 8; i++) {
+            if (i != 5 || i != 6 || i != 7)
+                beeline[i] = 0;
+        }
+        for (int i = 0; i < 3; i++) {
+                yota[i] = 0;
+        }
         comparison(tele2, mts, megafon, beeline, yota);
 
         break;
