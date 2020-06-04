@@ -19,7 +19,7 @@ int question1(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
     cout << "\tДля каких целей вы чаще всего используете телефон?" << endl
          << "1: Звонки и смс\n"
          << "2: Социальные сети\n"
-         << "3: Сторонние сервисы(ютуб,браузер,мобильные игры и тд.\n"
+         << "3: Сторонние сервисы (ютуб, браузер, мобильные игры и тд.)\n"
          << "4: Все вариаты\n\n";
     bool y = 0;
 
@@ -29,7 +29,7 @@ int question1(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         cin >> choice;
 
         if (choice < 1 || choice > 4)
-            cout << "Ошибка,такого пункта не существует!" << endl;
+            cout << "Ошибка, такого пункта не существует!" << endl;
         else
             y = 1;
     }
@@ -118,7 +118,7 @@ int question2(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 {
     system("cls");
     cout << "\tКакой мобильный оператор наиболее популярен среди ваших "
-            "родственников(знакомых)?"
+            "родственников (знакомых)?"
          << endl
          << "1: Теле 2\n"
          << "2: Мтс\n"
@@ -133,7 +133,7 @@ int question2(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         cin >> choice;
 
         if (choice < 1 || choice > 5)
-            cout << "Ошибка,такого пункта не существует!" << endl;
+            cout << "Ошибка, такого пункта не существует!" << endl;
         else
             y = 1;
     }
@@ -181,7 +181,7 @@ int question3(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         cin >> choice;
 
         if (choice < 1 || choice > 2)
-            cout << "Ошибка,такого пункта не существует!" << endl;
+            cout << "Ошибка, такого пункта не существует!" << endl;
         else
             y = 1;
     }
@@ -212,7 +212,7 @@ int question4(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         cin >> choice;
 
         if (choice < 1 || choice > 3)
-            cout << "Ошибка,такого пункта не существует!" << endl;
+            cout << "Ошибка, такого пункта не существует!" << endl;
         else
             y = 1;
     }
@@ -292,7 +292,7 @@ int question5(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         cin >> choice;
 
         if (choice < 1 || choice > 4)
-            cout << "Ошибка,такого пункта не существует!" << endl;
+            cout << "Ошибка, такого пункта не существует!" << endl;
         else
             y = 1;
     }
@@ -357,7 +357,7 @@ int question6(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         cin >> choice;
 
         if (choice < 1 || choice > 4)
-            cout << "Ошибка,такого пункта не существует!" << endl;
+            cout << "Ошибка, такого пункта не существует!" << endl;
         else
             y = 1;
     }
@@ -425,7 +425,7 @@ int question7(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         cin >> choice;
 
         if (choice < 1 || choice > 4)
-            cout << "Ошибка,такого пункта не существует!" << endl;
+            cout << "Ошибка, такого пункта не существует!" << endl;
         else
             y = 1;
     }
