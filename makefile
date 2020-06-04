@@ -20,3 +20,6 @@ Pricing_plan_Helper: ./build/src/main.o ./build/src/Menu.o ./build/src/ob_operat
 ./build/src/questions.o: ./src/questions.cpp
 	g++ -std=c++17 -c ./src/questions.cpp -o ./build/src/questions.o -lm
 
+clean:
+	rm -rf ./build/src/*.o ./build/test/*.o
+

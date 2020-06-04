@@ -13,7 +13,6 @@ int counting_for_tele2(
         int* beeline,
         int* yota)
 {
-    system("cls");
     setlocale(LC_ALL, "Russian");
     int i;
     *imax_fortele2 = 0;
@@ -36,7 +35,6 @@ int counting_for_mts(
         int* beeline,
         int* yota)
 {
-    system("cls");
     setlocale(LC_ALL, "Russian");
     int i;
     *imax_mts = 0;
@@ -59,7 +57,6 @@ int counting_for_megafon(
         int* beeline,
         int* yota)
 {
-    system("cls");
     setlocale(LC_ALL, "Russian");
     int i;
     *imax_megafon = 0;
@@ -82,7 +79,6 @@ int counting_for_beeline(
         int* beeline,
         int* yota)
 {
-    system("cls");
     setlocale(LC_ALL, "Russian");
     int i;
     *imax_beeline = 0;
@@ -105,7 +101,6 @@ int counting_for_yota(
         int* beeline,
         int* yota)
 {
-    system("cls");
     setlocale(LC_ALL, "Russian");
     int i;
     *imax_yota = 0;
