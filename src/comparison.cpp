@@ -22,7 +22,9 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << "- 20 гигабайт" << endl
              << "- Соцсети и мессенджеры безлимитно" << endl
              << "- Скидка 10% на абонентскую плату при покупке и объединении в "
-                "группу 4 SIM";
+                "группу 4 SIM"
+             << endl
+             << endl;
 
         break;
     case 1:
@@ -32,7 +34,9 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << "- 30 гигабайт" << endl
              << "- Соцсети и мессенджеры безлимитно" << endl
              << "- Скидка 10% на абонентскую плату при покупке и объединении в "
-                "группу 4 SIM";
+                "группу 4 SIM"
+             << endl
+             << endl;
 
         break;
     case 2:
@@ -42,20 +46,24 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << endl
              << "- 10 гигабайт" << endl
              << "- Скидка 10% на абонентскую плату при покупке и объединении в "
-                "группу 4 SIM";
+                "группу 4 SIM"
+             << endl
+             << endl;
 
         break;
     case 3:
         cout << "\tЛайт - 10руб/день" << endl
              << "- безлимит на Tele2 России" << endl
-             << "- 15 гигабайт" << endl;
+             << "- 15 гигабайт" << endl
+             << endl;
 
         break;
     case 4:
         cout << "\tБезлимит - 650руб/месяц" << endl
              << "- безлимит на Tele2 России" << endl
              << "- 500 минут на остальные номера России" << endl
-             << "- безлимитный интернет" << endl;
+             << "- безлимитный интернет" << endl
+             << endl;
 
         break;
     case 5:
@@ -64,7 +72,8 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << "- 2 000 минут" << endl
              << "- Международный роуминг без доплат" << endl
              << "- Безлимитные звонки внутри сети Tele2 России" << endl
-             << "- Обслуживание по выделенной линии";
+             << "- Обслуживание по выделенной линии" << endl
+             << endl;
 
         break;
     }
@@ -82,14 +91,16 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << "- Звонки на все сети России" << endl
              << "- Безлимит (с опцией)25 Гб (без опции)" << endl
              << "- 500 Минут" << endl
-             << "- 500 SMS";
+             << "- 500 SMS" << endl
+             << endl;
 
         break;
     case 1:
         cout << "\tМой smart - 575 руб./ месяц" << endl
              << "- 15 гигабайт" << endl
              << "- 400 Минут" << endl
-             << "- 400 SMS";
+             << "- 400 SMS" << endl
+             << endl;
 
         break;
     case 2:
@@ -98,14 +109,16 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << endl
              << "- Безлимитный интернет" << endl
              << "- 1500 мин на все сети" << endl
-             << "- До 5-ти дополнительных номеров";
+             << "- До 5-ти дополнительных номеров" << endl
+             << endl;
 
         break;
     case 3:
         cout << "\tТариф «X» - 520 руб./ месяц" << endl
              << "- Безлимит на YouTube и другие популярные ресурсы " << endl
              << "- + остальной интернет 7 ГБ" << endl
-             << "- 100 мин на все сети";
+             << "- 100 мин на все сети" << endl
+             << endl;
 
         break;
     case 4:
@@ -113,7 +126,8 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << "- Базовый пакет интернета и минут" << endl
              << "- 5 ГБ" << endl
              << "- 200 мин на все сети" << endl
-             << "Бeзлимитные звонки на МТС региона";
+             << "Бeзлимитные звонки на МТС региона" << endl
+             << endl;
 
         break;
     case 5:
@@ -121,7 +135,8 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << "- Для тех, кто не ограничивает себя в общении" << endl
              << "- 3000 мин на все сети" << endl
              << "- Бeзлимитные звонки на МТС России" << endl
-             << "- Безлимитный интернет" << endl;
+             << "- Безлимитный интернет" << endl
+             << endl;
 
         break;
     case 6:
@@ -129,7 +144,8 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << "- Много минут и интернета, Premium сервис" << endl
              << "- 5000 мин на все сети" << endl
              << "- Премиальное обслуживание" << endl
-             << "- Безлимитный интернет" << endl;
+             << "- Безлимитный интернет" << endl
+             << endl;
 
         break;
     }
@@ -147,7 +163,8 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << "- Мессенджеры доступны даже при нуле" << endl
              << "- Пакет SMS включён в тариф" << endl
              << "- Звонки 800 минут" << endl
-             << "- Безлимитный интернет" << endl;
+             << "- Безлимитный интернет" << endl
+             << endl;
 
         break;
     case 1:
@@ -156,7 +173,8 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << "- Гигабайты сохраняются и накапливаются" << endl
              << "- Мессенджеры доступны даже при нуле" << endl
              << "Звонки 600 минут" << endl
-             << "Интернет 25 ГБ" << endl;
+             << "Интернет 25 ГБ" << endl
+             << endl;
 
         break;
     case 2:
@@ -165,7 +183,8 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << "- Гигабайты сохраняются и накапливаются" << endl
              << "- Мессенджеры доступны даже при нуле" << endl
              << "- Звонки 300 минут" << endl
-             << "Интернет 10 ГБ" << endl;
+             << "Интернет 10 ГБ" << endl
+             << endl;
 
         break;
     case 3:
@@ -175,7 +194,8 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << "- Мессенджеры доступны даже при нуле" << endl
              << "- Звонки на МегаФон не расходуют минуты" << endl
              << "- Звонки 400 минут" << endl
-             << "- Интернет 4 ГБ" << endl;
+             << "- Интернет 4 ГБ" << endl
+             << endl;
 
         break;
     case 4:
@@ -185,7 +205,8 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << "- Мессенджеры доступны даже при нуле" << endl
              << "- Звонки на МегаФон не расходуют минуты" << endl
              << "- Звонки 200 минут" << endl
-             << "- Интернет3 ГБ" << endl;
+             << "- Интернет3 ГБ" << endl
+             << endl;
 
         break;
     case 5:
@@ -194,7 +215,8 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << "- Мессенджеры доступны даже при нуле" << endl
              << "- Пакет SMS включён в тариф" << endl
              << "- Звонки 1500 минут" << endl
-             << "- Безлимитный интернет" << endl;
+             << "- Безлимитный интернет" << endl
+             << endl;
 
         break;
     case 6:
@@ -203,7 +225,8 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
              << "- Мессенджеры доступны даже при нуле" << endl
              << "- Пакет SMS включён в тариф" << endl
              << "- Звонки 3000 минут" << endl
-             << "- Безлимитный интернет" << endl;
+             << "- Безлимитный интернет" << endl
+             << endl;
 
         break;
     }
@@ -310,19 +333,22 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
     case 0:
         cout << "\tБольше интернета - 366,79уб/месяц" << endl
              << "- 105 минут" << endl
-             << "- 15 ГБ" << endl;
+             << "- 15 ГБ" << endl
+             << endl;
         system("PAUSE");
         break;
     case 1:
         cout << "\tБольше минут - 311,96уб/месяц" << endl
              << "- 305 минут" << endl
-             << "- 5 ГБ" << endl;
+             << "- 5 ГБ" << endl
+             << endl;
         system("PAUSE");
         break;
     case 2:
         cout << "\t ещё больше минут и интернета - 479,80уб/месяц" << endl
              << "- 585 минут" << endl
-             << "- Безлимитный интернет" << endl;
+             << "- Безлимитный интернет" << endl
+             << endl;
 
         break;
     }
