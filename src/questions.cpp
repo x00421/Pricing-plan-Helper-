@@ -93,7 +93,7 @@ int question1(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         megafon[0] += 1;
         megafon[5] += 1;
         megafon[6] += 1;
-        question2();
+        question2(tele2, mts, megafon, beeline, yota);
     case 4:
         megafon[0] += 1;
         megafon[5] += 1;

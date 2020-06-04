@@ -1,5 +1,5 @@
-Pricing_plan_Helper: ./build/src/main.o ./build/src/Menu.o ./build/src/ob_operatorax.o ./build/src/questions.o ./build/src/counting_for.o  ./build/src/comparison.o ./build/src/globals.o
-	g++ -std=c++17 ./build/src/main.o ./build/src/Menu.o ./build/src/ob_operatorax.o ./build/src/questions.o ./build/src/counting_for.o  ./build/src/comparison.o -o ./bin/Pricing_plan_Helper ./build/src/globals.o
+Pricing_plan_Helper: ./build/src/main.o ./build/src/Menu.o ./build/src/ob_operatorax.o ./build/src/questions.o ./build/src/counting_for.o  ./build/src/comparison.o
+	g++ -std=c++17 ./build/src/main.o ./build/src/Menu.o ./build/src/ob_operatorax.o ./build/src/questions.o ./build/src/counting_for.o  ./build/src/comparison.o -o ./bin/Pricing_plan_Helper
 
 
 ./build/src/main.o: ./src/main.cpp
@@ -20,5 +20,3 @@ Pricing_plan_Helper: ./build/src/main.o ./build/src/Menu.o ./build/src/ob_operat
 ./build/src/questions.o: ./src/questions.cpp
 	g++ -std=c++17 -c ./src/questions.cpp -o ./build/src/questions.o -lm
 
-./build/src/globals.o: ./src/globals.cpp
-	g++ -std=c++17 -c ./src/globals.cpp -o ./build/src/globals.o -lm

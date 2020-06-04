@@ -4,11 +4,12 @@
 #include <iostream>
 using namespace std;
 
-int comparison()
+int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 {
     // 0
     int imax_fortele2, max_fortele2;
-    counting_for_tele2(&imax_fortele2, &max_fortele2);
+    counting_for_tele2(
+            &imax_fortele2, &max_fortele2, tele2, mts, megafon, beeline, yota);
 
     cout << "\t         Из тарифов Теле2 вам больше всего подойдёт: " << endl;
 
@@ -70,7 +71,7 @@ int comparison()
 
     // 1
     int imax_mts, max_mts;
-    counting_for_mts(&imax_mts, &max_mts);
+    counting_for_mts(&imax_mts, &max_mts, tele2, mts, megafon, beeline, yota);
 
     cout << "\t         Из тарифов МТС вам больше всего подойдёт: " << endl;
 
@@ -134,7 +135,8 @@ int comparison()
     }
     // 2
     int imax_megafon, max_megafon;
-    counting_for_megafon(&imax_megafon, &max_megafon);
+    counting_for_megafon(
+            &imax_megafon, &max_megafon, tele2, mts, megafon, beeline, yota);
 
     cout << "\t         Из тарифов Мегафон вам больше всего подойдёт: " << endl;
 
@@ -207,10 +209,88 @@ int comparison()
     }
     // 3
     int imax_beeline, max_beeline;
-    counting_for_beeline(&imax_beeline, &max_beeline);
+    counting_for_beeline(
+            &imax_beeline, &max_beeline, tele2, mts, megafon, beeline, yota);
+    cout << "\t         Из тарифов Beeline вам больше всего подойдёт: " << endl;
+
+    switch (imax_beeline) {
+    case 0:
+        cout << "\tНе один дома - 600 руб./ месяц" << endl
+             << "- 20 гигабайт»" << endl
+             << "- 500 минут" << endl
+             << "- 300 SMS" << endl
+             << "- Облако на 10 ГБ" << endl
+             << "- Журналы/Фильмы + сериалы и ТВ";
+        system("pause");
+        break;
+    case 1:
+        cout << "\tНе один дома 2 - 750 руб./ месяц" << endl
+             << "- 30 гигабайт" << endl
+             << "- 1000 Минут" << endl
+             << "- 300 SMS" << endl
+             << "- Облако на 10 ГБ" << endl
+             << "- Журналы/Фильмы + сериалы и ТВ" << endl;
+        system("pause");
+        break;
+    case 2:
+        cout << "\tБлизкие люди 1 - 400 руб./ месяц" << endl
+             << "- 15 гигабайт + безлимитные мессенджеры" << endl
+             << "- 400 Минут" << endl
+             << "- 300 SMS" << endl
+             << "- В подарок к тарифу 20 ТВ каналов" << endl
+             << "- Раздели 15 ГБ с 1 номером";
+        system("pause");
+        break;
+    case 3:
+        cout << "\tБлизкие люди 2 - 500 руб./ месяц" << endl
+             << "- 20 гигабайт + безлимитные мессенджеры" << endl
+             << "- 700 Минут" << endl
+             << "- 300 SMS" << endl
+             << "- В подарок к тарифу 20 ТВ каналов" << endl
+             << "- Раздели 20 ГБ с 1 номером";
+        system("pause");
+        break;
+    case 4:
+        cout << "\tБлизкие люди 3 - 650 руб./ месяц" << endl
+             << "- Безлимитный интернет + безлимитная раздача" << endl
+             << "- 1200 Минут" << endl
+             << "- 300 SMS" << endl
+             << "- В подарок к тарифу 75 ТВ каналов" << endl
+             << "- Подключи к тарифу ещё один номер";
+        system("pause");
+        break;
+    case 5:
+        cout << "\tБлизкие люди 4 - 900 руб./ месяц" << endl
+             << "- Безлимитный интернет + безлимитная раздача" << endl
+             << "- 1800 Минут" << endl
+             << "- 300 SMS" << endl
+             << "- В подарок к тарифу 155 ТВ каналов" << endl
+             << "- Подключи к тарифу ещё два номера";
+        system("pause");
+        break;
+    case 6:
+        cout << "\tБлизкие люди 5 - 1500 руб./ месяц" << endl
+             << "- Безлимитный интернет + безлимитная раздача" << endl
+             << "- 2500 Минут" << endl
+             << "- 300 SMS" << endl
+             << "- В подарок к тарифу 155 ТВ каналов" << endl
+             << "- Подключи к тарифу ещё три номера";
+        system("pause");
+        break;
+    case 7:
+        cout << "\tБлизкие люди 6 - 2500 руб./ месяц" << endl
+             << "- Безлимитный интернет + безлимитная раздача" << endl
+             << "- 4000 Минут" << endl
+             << "- 300 SMS" << endl
+             << "- В подарок к тарифу 195 ТВ каналов" << endl
+             << "- Подключи к тарифу ещё пять номеров";
+        system("pause");
+        break;
+    }
     // 4
     int imax_yota, max_yota;
-    counting_for_yota(&imax_yota, &max_yota);
+    counting_for_yota(
+            &imax_yota, &max_yota, tele2, mts, megafon, beeline, yota);
     cout << "\t         Из тарифов Yota вам больше всего подойдёт: " << endl;
     switch (max_yota) {
     case 0:
