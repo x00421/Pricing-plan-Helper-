@@ -16,7 +16,7 @@ int question7(int* tele2, int* mts, int* megafon, int* beeline, int* yota);
 int question1(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 {
     system("cls");
-cout << "\tДля каких целей вы чаще всего используете телефон?" << endl
+    cout << "\tДля каких целей вы чаще всего используете телефон?" << endl
          << "1: Звонки и смс\n"
          << "2: Социальные сети\n"
          << "3: Сторонние сервисы(ютуб,браузер,мобильные игры и тд.\n"
@@ -476,14 +476,14 @@ int question7(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         mts[4]++;
 
         for (int i = 0; i < 7; i++) {
-            if (i != 1 || i != 3 || i != 4 )
+            if (i != 1 || i != 3 || i != 4)
                 mts[i] = 0;
         }
 
         megafon[1]++;
 
         for (int i = 0; i < 7; i++) {
-            if (i != 1 )
+            if (i != 1)
                 megafon[i] = 0;
         }
 
@@ -491,7 +491,7 @@ int question7(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         beeline[3]++;
 
         for (int i = 0; i < 8; i++) {
-            if (i != 0 || i != 3 )
+            if (i != 0 || i != 3)
                 beeline[i] = 0;
         }
 
@@ -531,7 +531,7 @@ int question7(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
                 beeline[i] = 0;
         }
         for (int i = 0; i < 3; i++) {
-                yota[i] = 0;
+            yota[i] = 0;
         }
         comparison(tele2, mts, megafon, beeline, yota);
 
@@ -567,7 +567,7 @@ int question7(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
                 beeline[i] = 0;
         }
         for (int i = 0; i < 3; i++) {
-                yota[i] = 0;
+            yota[i] = 0;
         }
         comparison(tele2, mts, megafon, beeline, yota);
 

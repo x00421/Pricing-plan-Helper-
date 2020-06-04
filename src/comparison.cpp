@@ -11,6 +11,11 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
     counting_for_tele2(
             &imax_fortele2, &max_fortele2, tele2, mts, megafon, beeline, yota);
 
+    if (max_fortele2 == 0) {
+        cout << "\t         Из тарифов Теле2 вам ничего подойдёт " << endl;
+        goto a;
+    }
+
     cout << "\t         Из тарифов Теле2 вам больше всего подойдёт: " << endl;
 
     switch (imax_fortele2) {
@@ -78,9 +83,15 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         break;
     }
 
-    // 1
+// 1
+a:
     int imax_mts = 0, max_mts = 0;
     counting_for_mts(&imax_mts, &max_mts, tele2, mts, megafon, beeline, yota);
+
+    if (max_mts == 0) {
+        cout << "\t         Из тарифов МТС вам ничего подойдёт " << endl;
+        goto b;
+    }
 
     cout << "\t         Из тарифов МТС вам больше всего подойдёт: " << endl;
 
@@ -149,10 +160,15 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 
         break;
     }
-    // 2
+// 2
+b:
     int imax_megafon = 0, max_megafon = 0;
     counting_for_megafon(
             &imax_megafon, &max_megafon, tele2, mts, megafon, beeline, yota);
+    if (max_mts == 0) {
+        cout << "\t         Из тарифов Мегафон вам ничего подойдёт " << endl;
+        goto c;
+    }
 
     cout << "\t         Из тарифов Мегафон вам больше всего подойдёт: " << endl;
 
@@ -230,10 +246,16 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 
         break;
     }
-    // 3
+// 3
+c:
     int imax_beeline = 0, max_beeline = 0;
     counting_for_beeline(
             &imax_beeline, &max_beeline, tele2, mts, megafon, beeline, yota);
+
+    if (max_beeline == 0) {
+        cout << "\t         Из тарифов Билайн вам ничего подойдёт " << endl;
+        goto d;
+    }
     cout << "\t         Из тарифов Beeline вам больше всего подойдёт: " << endl;
 
     switch (imax_beeline) {
@@ -324,10 +346,16 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 
         break;
     }
-    // 4
+// 4
+d:
     int imax_yota = 0, max_yota = 0;
     counting_for_yota(
             &imax_yota, &max_yota, tele2, mts, megafon, beeline, yota);
+
+    if (max_yota == 0) {
+        cout << "\t         Из тарифов Йота вам ничего подойдёт " << endl;
+        goto e;
+    }
     cout << "\t         Из тарифов Yota вам больше всего подойдёт: " << endl;
     switch (max_yota) {
     case 0:
@@ -352,6 +380,7 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 
         break;
     }
+e:
     system("PAUSE");
     void mainMenu();
 }
