@@ -1,5 +1,4 @@
 #include "Menu.hpp"
-#include "globals.hpp"
 #include "ob_operatorax.hpp"
 #include <iostream>
 
@@ -34,9 +33,6 @@ int counting_for_mts(int* max_mts, int* imax_mts)
             *max_mts = mts[i], *imax_mts = i;
     }
 
-    cout << "\n Максимальный элемент(mts): " << *max_mts;
-    cout << "\n Индекс макс. элемента(mts): " << *imax_mts << endl;
-
     return 0;
 }
 
@@ -52,9 +48,6 @@ int counting_for_megafon(int* max_megafon, int* imax_megafon)
         if (megafon[i] > *max_megafon)
             *max_megafon = megafon[i], *imax_megafon = i;
     }
-
-    cout << "\n Максимальный элемент(megafon): " << *max_megafon;
-    cout << "\n Индекс макс. элемента(megafon): " << *imax_megafon << endl;
 
     return 0;
 }
@@ -72,9 +65,6 @@ int counting_for_beeline(int* max_beeline, int* imax_beeline)
             *max_beeline = beeline[i], *imax_beeline = i;
     }
 
-    cout << "\n Максимальный элемент(beeline): " << *max_beeline;
-    cout << "\n Индекс макс. элемента(beeline): " << *imax_beeline << endl;
-
     return 0;
 }
 
@@ -90,9 +80,6 @@ int counting_for_yota(int* max_yota, int* imax_yota)
         if (yota[i] > *max_yota)
             *max_yota = yota[i], *imax_yota = i;
     }
-
-    cout << "\n Максимальный элемент: " << *max_yota;
-    cout << "\n Индекс макс. элемента: " << *imax_yota << endl;
 
     return 0;
 }

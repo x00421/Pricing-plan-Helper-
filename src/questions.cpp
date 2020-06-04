@@ -2,19 +2,18 @@
 #include "Menu.hpp"
 #include "comparison.hpp"
 #include "counting_for.hpp"
-#include "globals.hpp"
 #include "ob_operatorax.hpp"
 #include <iostream>
 using namespace std;
 
-int question2();
-int question3();
-int question4();
-int question5();
-int question6();
-int question7();
+int question2(int* tele2, int* mts, int* megafon, int* beeline, int* yota);
+int question3(int* tele2, int* mts, int* megafon, int* beeline, int* yota);
+int question4(int* tele2, int* mts, int* megafon, int* beeline, int* yota);
+int question5(int* tele2, int* mts, int* megafon, int* beeline, int* yota);
+int question6(int* tele2, int* mts, int* megafon, int* beeline, int* yota);
+int question7(int* tele2, int* mts, int* megafon, int* beeline, int* yota);
 
-int question1()
+int question1(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 {
     system("cls");
     cout << "\tДля каких целей вы чаще всего используете телефон?" << endl
@@ -58,7 +57,7 @@ int question1()
 
         yota[2] += 1;
         cout << megafon[0];
-        question2();
+        question2(tele2, mts, megafon, beeline, yota);
         break;
     case 2:
         for (int i = 4; i < 8; i++) {
@@ -77,7 +76,7 @@ int question1()
         megafon[0] += 1;
         megafon[5] += 1;
         megafon[6] += 1;
-        question2();
+        question2(tele2, mts, megafon, beeline, yota);
     case 3:
         yota[2] += 1;
         for (int i = 4; i < 8; i++) {
@@ -109,13 +108,13 @@ int question1()
         for (int i = 4; i < 8; i++) {
             beeline[i] += 1;
         }
-        question2();
+        question2(tele2, mts, megafon, beeline, yota);
     }
 
     return 0;
 }
 
-int question2()
+int question2(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 {
     system("cls");
     cout << "\tКакой мобильный оператор наиболее популярен среди ваших "
@@ -143,32 +142,32 @@ int question2()
         for (int i = 0; i < 6; i++) {
             tele2[i] += 1;
         }
-        question3();
+        question3(tele2, mts, megafon, beeline, yota);
     case 2:
         for (int i = 0; i < 7; i++) {
             mts[i] += 1;
         }
-        question3();
+        question3(tele2, mts, megafon, beeline, yota);
     case 3:
         for (int i = 0; i < 7; i++) {
             megafon[i] += 1;
         }
-        question3();
+        question3(tele2, mts, megafon, beeline, yota);
     case 4:
         for (int i = 0; i < 8; i++) {
             beeline[i] += 1;
         }
-        question3();
+        question3(tele2, mts, megafon, beeline, yota);
     case 5:
         for (int i = 0; i < 3; i++) {
             yota[i] += 1;
         }
-        question3();
+        question3(tele2, mts, megafon, beeline, yota);
     }
     return 0;
 }
 
-int question3()
+int question3(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 {
     system("cls");
     cout << "\tКуда чаще всего вы совершаете звонки?" << endl
@@ -188,17 +187,17 @@ int question3()
     }
     switch (choice) {
     case 1:
-        question4();
+        question4(tele2, mts, megafon, beeline, yota);
         break;
     case 2:
-        question4();
+        question4(tele2, mts, megafon, beeline, yota);
         break;
     }
 
     return 0;
 }
 
-int question4()
+int question4(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 {
     system("cls");
     cout << "\tСколько минут в среднем вы тратите на разговоры в месяц?" << endl
@@ -228,7 +227,7 @@ int question4()
         megafon[4] += 1;
 
         yota[0] += 1;
-        question5();
+        question5(tele2, mts, megafon, beeline, yota);
         break;
     case 2:
         tele2[0] += 1;
@@ -244,7 +243,7 @@ int question4()
         beeline[2] += 1;
 
         yota[1] += 1;
-        question5();
+        question5(tele2, mts, megafon, beeline, yota);
         break;
     case 3:
         tele2[1] += 1;
@@ -268,14 +267,14 @@ int question4()
         beeline[7] += 1;
 
         yota[2] += 1;
-        question5();
+        question5(tele2, mts, megafon, beeline, yota);
         break;
     }
 
     return 0;
 }
 
-int question5()
+int question5(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 {
     system("cls");
     cout << "\tСколько SMS в среднем вы отправляете в день?" << endl
@@ -308,7 +307,7 @@ int question5()
         for (int i = 0; i < 9; i++) {
             beeline[i] += 1;
         }
-        question6();
+        question6(tele2, mts, megafon, beeline, yota);
         break;
     case 2:
         megafon[0]++;
@@ -322,7 +321,7 @@ int question5()
         for (int i = 0; i < 9; i++) {
             beeline[i] += 1;
         }
-        question6();
+        question6(tele2, mts, megafon, beeline, yota);
         break;
     case 3:
         for (int i = 0; i < 7; i++) {
@@ -330,17 +329,17 @@ int question5()
                 mts[i] += 1;
             }
         }
-        question6();
+        question6(tele2, mts, megafon, beeline, yota);
         break;
     case 4:
-        question6();
+        question6(tele2, mts, megafon, beeline, yota);
         break;
     }
 
     return 0;
 }
 
-int question6()
+int question6(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 {
     system("cls");
     cout << "\tКакой пакет интернета вы бы предпочли?" << endl
@@ -366,13 +365,13 @@ int question6()
         megafon[3]++;
         megafon[4]++;
         yota[1]++;
-        question7();
+        question7(tele2, mts, megafon, beeline, yota);
     case 2:
         mts[3]++;
         mts[4]++;
         tele2[2]++;
         megafon[2]++;
-        question7();
+        question7(tele2, mts, megafon, beeline, yota);
     case 3:
         beeline[0]++;
         beeline[1]++;
@@ -385,7 +384,7 @@ int question6()
         megafon[1]++;
         megafon[2]++;
         yota[0]++;
-        question7();
+        question7(tele2, mts, megafon, beeline, yota);
     case 4:
         yota[2]++;
         beeline[4]++;
@@ -401,13 +400,13 @@ int question6()
         megafon[0]++;
         megafon[5]++;
         megafon[6]++;
-        question7();
+        question7(tele2, mts, megafon, beeline, yota);
     }
 
     return 0;
 }
 
-int question7()
+int question7(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 {
     system("cls");
     cout << "\tКакую сумму вы хотели бы тратить на услуги связи и интернета?"
@@ -441,7 +440,7 @@ int question7()
         beeline[2]++;
 
         yota[1]++;
-        comparison();
+        comparison(tele2, mts, megafon, beeline, yota);
 
         break;
     case 2:
@@ -457,7 +456,7 @@ int question7()
         beeline[3]++;
 
         yota[2]++;
-        comparison();
+        comparison(tele2, mts, megafon, beeline, yota);
 
         break;
     case 3:
@@ -469,7 +468,7 @@ int question7()
 
         beeline[1]++;
         beeline[4]++;
-        comparison();
+        comparison(tele2, mts, megafon, beeline, yota);
 
         break;
     case 4:
@@ -485,7 +484,7 @@ int question7()
         beeline[5]++;
         beeline[6]++;
         beeline[7]++;
-        comparison();
+        comparison(tele2, mts, megafon, beeline, yota);
 
         break;
     }
