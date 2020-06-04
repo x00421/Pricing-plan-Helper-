@@ -1,7 +1,6 @@
 #include "Menu.hpp"
 #include "comparison.hpp"
 #include "counting_for.hpp"
-#include "globals.hpp"
 #include "ob_operatorax.hpp"
 #include "questions.hpp"
 #include <iostream>
