@@ -1,4 +1,4 @@
-#include "ob_operatorax.hpp"
+#include "about_operators.hpp"
 #include "questions.hpp"
 #include <iostream>
 using namespace std;
@@ -60,19 +60,18 @@ void mainMenu()
 
     //вывод пунктов меню
     system("cls");
-    setlocale(LC_ALL, "Russian");
 
     cout << "\t       Черноколпаков, Дудинский, Кичигин - ИП-915" << endl;
 
-    cout << "\t1-для запуска ассистента!\n"
-         << "\t2-инструкция.\n"
-         << "\t3-сведенья об операторах.\n"
-         << "\t4-Выход.\n";
+    cout << "\t1-для запуска ассистента!" << endl
+         << "\t2-инструкция." << endl
+         << "\t3-сведенья об операторах." << endl
+         << "\t4-Выход." << endl;
 
-    bool y = 0;
+    bool check_input_data = 0;
 
     int choice; //для выбора пункта меню
-    while (!y) {
+    while (!check_input_data) {
         cout << ">";
         cin >> choice;
 
@@ -80,7 +79,7 @@ void mainMenu()
 
             cout << "Ошибка,такого пункта не существует!" << endl;
         else
-            y = 1;
+            check_input_data = 1;
     }
 
     switch (choice) {
@@ -92,12 +91,14 @@ void mainMenu()
         system("cls");
 
         cout << "\nДля запуска ассистента, помогающего выбрать тариф нажмите - "
-                "1\n"
-             << "Чтобы узнать информацию об операторах нажмите - 3 \n"
+                "1"
+             << endl
+             << "Чтобы узнать информацию об операторах нажмите - 3 " << endl
              << "Курсовая работа была создана: Черноколпаков, Дудинский, "
                 "Кичигин - "
-                "ИП-915\n"
-             << "\n"
+                "ИП-915"
+             << endl
+             << "" << endl
              << endl;
         system("pause");
         mainMenu();
@@ -105,7 +106,7 @@ void mainMenu()
     case 3:
 
         system("cls");
-        ob_operatorax(tele2, mts, megafon, beeline, yota);
+        about_operators(tele2, mts, megafon, beeline, yota);
         break;
 
     case 4:

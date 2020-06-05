@@ -1,5 +1,5 @@
 #include "Menu.hpp"
-#include "ob_operatorax.hpp"
+#include "about_operators.hpp"
 #include <iostream>
 
 using namespace std;
@@ -13,7 +13,6 @@ int counting_for_tele2(
         int* beeline,
         int* yota)
 {
-    setlocale(LC_ALL, "Russian");
     int i;
     *imax_fortele2 = 0;
     *max_fortele2 = tele2[0];
@@ -35,7 +34,6 @@ int counting_for_mts(
         int* beeline,
         int* yota)
 {
-    setlocale(LC_ALL, "Russian");
     int i;
     *imax_mts = 0;
     *max_mts = mts[0];
@@ -57,7 +55,6 @@ int counting_for_megafon(
         int* beeline,
         int* yota)
 {
-    setlocale(LC_ALL, "Russian");
     int i;
     *imax_megafon = 0;
     *max_megafon = megafon[0];
@@ -79,7 +76,6 @@ int counting_for_beeline(
         int* beeline,
         int* yota)
 {
-    setlocale(LC_ALL, "Russian");
     int i;
     *imax_beeline = 0;
     *max_beeline = beeline[0];
@@ -101,7 +97,6 @@ int counting_for_yota(
         int* beeline,
         int* yota)
 {
-    setlocale(LC_ALL, "Russian");
     int i;
     *imax_yota = 0;
     *max_yota = yota[0];

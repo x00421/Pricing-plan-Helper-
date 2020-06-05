@@ -1,8 +1,8 @@
 #include "questions.hpp"
 #include "Menu.hpp"
+#include "about_operators.hpp"
 #include "comparison.hpp"
 #include "counting_for.hpp"
-#include "ob_operatorax.hpp"
 #include <iostream>
 using namespace std;
 
@@ -18,21 +18,21 @@ int question1(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 {
     system("cls");
     cout << "\tДля каких целей вы чаще всего используете телефон?" << endl
-         << "1: Звонки и смс\n"
-         << "2: Социальные сети\n"
-         << "3: Сторонние сервисы (ютуб, браузер, мобильные игры и тд.)\n"
-         << "4: Все вариаты\n\n";
-    bool y = 0;
+         << "1: Звонки и смс" << endl
+         << "2: Социальные сети" << endl
+         << "3: Сторонние сервисы (ютуб, браузер, мобильные игры и тд.)" << endl
+         << "4: Все вариаты" << endl;
+    bool check_input_data = 0;
 
     int choice; //для выбора пункта меню
-    while (!y) {
+    while (!check_input_data) {
         cout << ">";
         cin >> choice;
 
         if (choice < 1 || choice > 4)
             cout << "Ошибка, такого пункта не существует!" << endl;
         else
-            y = 1;
+            check_input_data = 1;
     }
     switch (choice) {
     case 1:
@@ -151,22 +151,22 @@ int question2(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
     cout << "\tКакой мобильный оператор наиболее популярен среди ваших "
             "родственников (знакомых)?"
          << endl
-         << "1: Теле 2\n"
-         << "2: Мтс\n"
-         << "3: Мегафон\n"
-         << "4: Билайн\n"
-         << "5: Yota\n";
-    bool y = 0;
+         << "1: Теле 2" << endl
+         << "2: Мтс" << endl
+         << "3: Мегафон" << endl
+         << "4: Билайн" << endl
+         << "5: Yota" << endl;
+    bool check_input_data = 0;
 
     int choice; //для выбора пункта меню
-    while (!y) {
+    while (!check_input_data) {
         cout << ">";
         cin >> choice;
 
         if (choice < 1 || choice > 5)
             cout << "Ошибка, такого пункта не существует!" << endl;
         else
-            y = 1;
+            check_input_data = 1;
     }
     switch (choice) {
     case 1:
@@ -202,19 +202,19 @@ int question3(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 {
     system("cls");
     cout << "\tКуда чаще всего вы совершаете звонки?" << endl
-         << "1: В домашний регион\n"
-         << "2: По всей России\n";
-    bool y = 0;
+         << "1: В домашний регион" << endl
+         << "2: По всей России" << endl;
+    bool check_input_data = 0;
 
     int choice; //для выбора пункта меню
-    while (!y) {
+    while (!check_input_data) {
         cout << ">";
         cin >> choice;
 
         if (choice < 1 || choice > 2)
             cout << "Ошибка, такого пункта не существует!" << endl;
         else
-            y = 1;
+            check_input_data = 1;
     }
     switch (choice) {
     case 1:
@@ -232,20 +232,20 @@ int question4(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 {
     system("cls");
     cout << "\tСколько минут в среднем вы тратите на разговоры в месяц?" << endl
-         << "1: 100-300\n"
-         << "2: 300-500\n"
-         << "3: 500+\n";
-    bool y = 0;
+         << "1: 100-300" << endl
+         << "2: 300-500" << endl
+         << "3: 500+" << endl;
+    bool check_input_data = 0;
 
     int choice; //для выбора пункта меню
-    while (!y) {
+    while (!check_input_data) {
         cout << ">";
         cin >> choice;
 
         if (choice < 1 || choice > 3)
             cout << "Ошибка, такого пункта не существует!" << endl;
         else
-            y = 1;
+            check_input_data = 1;
     }
     switch (choice) {
     case 1:
@@ -338,21 +338,21 @@ int question5(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 {
     system("cls");
     cout << "\tСколько SMS в среднем вы отправляете в день?" << endl
-         << "1: 0-2\n"
-         << "2: 3-10\n"
-         << "3: 11 и более\n"
-         << "4: Затрудняюсь ответитть\n";
-    bool y = 0;
+         << "1: 0-2" << endl
+         << "2: 3-10" << endl
+         << "3: 11 и более" << endl
+         << "4: Затрудняюсь ответить" << endl;
+    bool check_input_data = 0;
 
     int choice; //для выбора пункта меню
-    while (!y) {
+    while (!check_input_data) {
         cout << ">";
         cin >> choice;
 
         if (choice < 1 || choice > 4)
             cout << "Ошибка, такого пункта не существует!" << endl;
         else
-            y = 1;
+            check_input_data = 1;
     }
     switch (choice) {
     case 1:
@@ -404,21 +404,21 @@ int question6(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
 {
     system("cls");
     cout << "\tКакой пакет интернета вы бы предпочли?" << endl
-         << "1: 1-5 Гб\n"
-         << "2: 5-10 Гб\n"
-         << "3: 10-20 Гб\n"
-         << "4: Безлимит\n";
-    bool y = 0;
+         << "1: 1-5 Гб" << endl
+         << "2: 5-10 Гб" << endl
+         << "3: 10-20 Гб" << endl
+         << "4: Безлимит" << endl;
+    bool check_input_data = 0;
 
     int choice; //для выбора пункта меню
-    while (!y) {
+    while (!check_input_data) {
         cout << ">";
         cin >> choice;
 
         if (choice < 1 || choice > 4)
             cout << "Ошибка, такого пункта не существует!" << endl;
         else
-            y = 1;
+            check_input_data = 1;
     }
     switch (choice) {
     case 1:
@@ -539,21 +539,21 @@ int question7(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
     system("cls");
     cout << "\tКакую сумму вы хотели бы тратить на услуги связи и интернета?"
          << endl
-         << "1: До 200-400р\n"
-         << "2: 400-600\n"
-         << "3: 600-800\n"
-         << "4: Больше 800\n";
-    bool y = 0;
+         << "1: До 200-400р" << endl
+         << "2: 400-600" << endl
+         << "3: 600-800" << endl
+         << "4: Больше 800" << endl;
+    bool check_input_data = 0;
 
     int choice; //для выбора пункта меню
-    while (!y) {
+    while (!check_input_data) {
         cout << ">";
         cin >> choice;
 
         if (choice < 1 || choice > 4)
             cout << "Ошибка, такого пункта не существует!" << endl;
         else
-            y = 1;
+            check_input_data = 1;
     }
     switch (choice) {
     case 1:
