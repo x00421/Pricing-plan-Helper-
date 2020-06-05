@@ -353,5 +353,5 @@ int comparison(int* tele2, int* mts, int* megafon, int* beeline, int* yota)
         break;
     }
     system("PAUSE");
-    void mainMenu();
+    mainMenu();
 }
